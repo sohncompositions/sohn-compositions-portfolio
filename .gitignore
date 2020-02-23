@@ -42,7 +42,8 @@ testem.log
 /typings
 CNAME
 url.txt
-temp.txt
+tmp.txt
+*.bat
 
 # System Files
 .DS_Store
