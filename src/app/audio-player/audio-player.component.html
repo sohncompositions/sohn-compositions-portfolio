@@ -1,0 +1,17 @@
+<div>
+    <audio src="" controls></audio>
+    <button (click)='togglePlayListMenu()'>Playlist</button>
+    <div *ngIf='playlistOpen'>
+        <ul>
+            <li>
+                <button>Track 1</button>
+            </li>
+            <li>
+                <button>Track 2</button>
+            </li>
+            <li>
+                <button>Track 3</button>
+            </li>
+        </ul>
+    </div>
+</div>

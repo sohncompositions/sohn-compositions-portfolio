@@ -1,0 +1,21 @@
+<header>
+    <div>
+        <button (click)='toggleMenu()'>Menu</button>
+    </div>
+    <div *ngIf='open'>
+        <ul>
+            <li>
+                <a routerLink='/' (click)='toggleMenu()'>Home</a>
+            </li>
+            <li>
+                <a routerLink='/bio' (click)='toggleMenu()'>Bio</a>
+            </li>
+            <li>
+                <a routerLink='/contact' (click)='toggleMenu()'>Contact</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        LOGO
+    </div>
+</header>
