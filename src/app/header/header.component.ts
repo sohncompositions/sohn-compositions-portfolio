@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
     templateUrl: './header.component.html'
 })
 export class HeaderComponent {
-    open = false;
-    toggleMenu() {
-        this.open = !this.open;
+    appMenuOpen = false;
+    toggleOpenMenu() {
+        this.appMenuOpen = !this.appMenuOpen;
     }
 }

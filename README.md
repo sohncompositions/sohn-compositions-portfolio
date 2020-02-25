@@ -2,10 +2,10 @@
 
 ### Changelog
 - **2-23-2020** Basic html skeleton set up
+- **2-24-2020** Material UI installed and implemented on Header and Menu
 
 ### Todo
-- Material UI library import
-- Material Theme
+- Footer Style/layout(social media icons)
 - Style/Layout with mock data/icons/files
 - Audio Player Functionality
 - Import production files/theme
