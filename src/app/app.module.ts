@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AudioPlayerComponent } from './audio-player/audio-player.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialUIModule } from './material-ui.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AudioPlayerComponent } from './audio-player/audio-player.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialUIModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

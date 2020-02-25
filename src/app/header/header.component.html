@@ -1,21 +1,21 @@
-<header>
-    <div>
-        <button (click)='toggleMenu()'>Menu</button>
+<mat-toolbar id='app-header'>
+    <div class='toolbar-item'>
+        <button mat-icon-button [matMenuTriggerFor]='menu'>
+            <mat-icon>
+                menu
+            </mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink='/'>Home</button>
+            <button mat-menu-item routerLink='/bio'>Bio</button>
+            <button mat-menu-item routerLink='/contact'>Contact</button>
+        </mat-menu>
     </div>
-    <div *ngIf='open'>
-        <ul>
-            <li>
-                <a routerLink='/' (click)='toggleMenu()'>Home</a>
-            </li>
-            <li>
-                <a routerLink='/bio' (click)='toggleMenu()'>Bio</a>
-            </li>
-            <li>
-                <a routerLink='/contact' (click)='toggleMenu()'>Contact</a>
-            </li>
-        </ul>
+    <div class='toolbar-item spacer'></div>
+    <div class='toolbar-item'>
+        <mat-icon>
+            <!-- Sohn LOGO here -->
+            music_note
+        </mat-icon>
     </div>
-    <div>
-        LOGO
-    </div>
-</header>
+</mat-toolbar>
