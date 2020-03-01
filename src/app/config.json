@@ -1,0 +1,55 @@
+{
+    "homePageCategories": [
+        "Sample",
+        "Demo",
+        "Test"
+    ],
+    "tracks": [
+        {
+            "title": "Demo Track 1",
+            "category": "Sample",
+            "src": "./assets/audio/demo_1.mp3"
+        },
+        {
+            "title": "Demo Track 2",
+            "category": "Sample",
+            "src": "./assets/audio/demo_2.mp3"
+        },
+        {
+            "title": "Demo Track 3",
+            "category": "Demo",
+            "src": "./assets/audio/demo_3.mp3"
+        },
+        {
+            "title": "Demo Track 4",
+            "category": "Demo",
+            "src": "./assets/audio/demo_4.mp3"
+        },
+        {
+            "title": "Demo Track 5",
+            "category": "Test",
+            "src": "./assets/audio/demo_5.mp3"
+        },
+        {
+            "title": "Demo Track 6",
+            "category": "Test",
+            "src": "./assets/audio/demo_6.mp3"
+        }
+    ],
+    "logo": {
+        "url": "./assets/images/**link to img file**"
+    },
+    "contactInfo": {
+        "email": "",
+        "phone": "",
+        "firstName": "Josh",
+        "lastName": "Sohn",
+        "company": "Sohn Compositions"
+    },
+    "socialMediaLinks": [
+        {
+            "url": "http://twtter.com/<username>",
+            "iconLabel": "twitter"
+        }
+    ]
+}

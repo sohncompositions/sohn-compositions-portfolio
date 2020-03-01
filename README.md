@@ -10,3 +10,7 @@
 - Style/Layout with mock data/icons/files
 - Audio Player Functionality
 - Import production files/theme
+
+### Notes (3/1/2020)
+- Display mp3 track title
+- Where to put social media icons? Footer or header or contact?

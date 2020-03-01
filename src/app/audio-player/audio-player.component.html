@@ -1,41 +1,10 @@
-<div class='audio-player'>
+<div class='audio-player-container'>
     <mat-menu #playlistMenu='matMenu'>
-        <button mat-menu-item>Track 1</button>
-        <button mat-menu-item>Track 2</button>
-        <button mat-menu-item>Track 3</button>
-        <button mat-menu-item>Track 3</button>
-        <button mat-menu-item>Track 3</button>
-        <button mat-menu-item>Track 3</button>
-        <button mat-menu-item>Track 3</button>
-        <button mat-menu-item>Track 3</button>
-        <button mat-menu-item>Track 3</button>
-        <button mat-menu-item>Track 3</button>
-        <button mat-menu-item>Track 3</button>
-        <button mat-menu-item>Track 3</button>
-        <button mat-menu-item>Track 3</button>
-        <button mat-menu-item>Track 3</button>
-        <button mat-menu-item>Track 3</button>
-        <button mat-menu-item>Track 3</button>
-        <button mat-menu-item>Track 3</button>
-        <button mat-menu-item>Track 3</button>
-        <button mat-menu-item>Track 3</button>
-        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item *ngFor='let track of audioService.tracks'
+            (click)='handleSelectTrack(track)'>{{track.title}}</button>
     </mat-menu>
     <button mat-icon-button [matMenuTriggerFor]='playlistMenu'>
         <mat-icon>list</mat-icon>
     </button>
-    <audio src="" controls></audio>
+    <audio id='audio-player' [src]="getAudioSource()" controls autoplay></audio>
 </div>
-<!-- <div *ngIf='playlistOpen'>
-        <ul>
-            <li>
-                <button>Track 1</button>
-            </li>
-            <li>
-                <button>Track 2</button>
-            </li>
-            <li>
-                <button>Track 3</button>
-            </li>
-        </ul>
-    </div> -->
