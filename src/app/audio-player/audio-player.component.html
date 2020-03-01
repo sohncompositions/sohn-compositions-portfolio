@@ -1,7 +1,32 @@
-<div>
+<div class='audio-player'>
+    <mat-menu #playlistMenu='matMenu'>
+        <button mat-menu-item>Track 1</button>
+        <button mat-menu-item>Track 2</button>
+        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item>Track 3</button>
+        <button mat-menu-item>Track 3</button>
+    </mat-menu>
+    <button mat-icon-button [matMenuTriggerFor]='playlistMenu'>
+        <mat-icon>list</mat-icon>
+    </button>
     <audio src="" controls></audio>
-    <button (click)='togglePlayListMenu()'>Playlist</button>
-    <div *ngIf='playlistOpen'>
+</div>
+<!-- <div *ngIf='playlistOpen'>
         <ul>
             <li>
                 <button>Track 1</button>
@@ -13,5 +38,4 @@
                 <button>Track 3</button>
             </li>
         </ul>
-    </div>
-</div>
+    </div> -->

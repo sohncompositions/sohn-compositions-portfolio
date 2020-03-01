@@ -6,10 +6,4 @@ import { Component } from '@angular/core';
     styleUrls: ['./audio-player.component.scss'],
 })
 
-export class AudioPlayerComponent {
-    playlistOpen = false;
-
-    togglePlayListMenu() {
-        this.playlistOpen = !this.playlistOpen;
-    }
-}
+export class AudioPlayerComponent { }

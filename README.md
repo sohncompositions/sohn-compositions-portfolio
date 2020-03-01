@@ -6,6 +6,7 @@
 
 ### Todo
 - Footer Style/layout(social media icons)
+ - Sticky header/footer with scrollable body
 - Style/Layout with mock data/icons/files
 - Audio Player Functionality
 - Import production files/theme
