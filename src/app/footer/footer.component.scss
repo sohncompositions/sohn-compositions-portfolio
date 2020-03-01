@@ -1,0 +1,20 @@
+@import "../../responsive.scss";
+
+p {
+  text-align: center;
+  vertical-align: middle;
+}
+.social-media-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+app-audio-player {
+  width: 100%;
+}
+
+@media (min-width: $breakpoint-sm) {
+  .social-media-links {
+    width: 65%;
+    margin: auto;
+  }
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AudioService } from '../services/audio.service';
 
 @Component({
     selector: 'app-audio-player',
@@ -7,9 +8,12 @@ import { Component } from '@angular/core';
 })
 
 export class AudioPlayerComponent {
-    playlistOpen = false;
+    constructor(public audioService: AudioService) { }
 
-    togglePlayListMenu() {
-        this.playlistOpen = !this.playlistOpen;
+    handleSelectTrack(track) {
+        this.audioService.changeTrack(track);
+    }
+    getAudioSource() {
+        return this.audioService.currentTrack ? this.audioService.currentTrack.src : '';
     }
 }

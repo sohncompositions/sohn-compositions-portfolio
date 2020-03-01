@@ -1,3 +1,9 @@
-<div>
-    <h3>Home</h3>
+<div class='home-container'>
+    <h3 class='mat-display-3' color='primary'>What are you in the mood for?</h3>
+    <div class='categories'>
+        <button [color]='determineColor(i)' mat-stroked-button *ngFor='let category of categories; index as i'
+            (click)='onClick(i, category)'>
+            {{category}}
+        </button>
+    </div>
 </div>

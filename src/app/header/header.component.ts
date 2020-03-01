@@ -5,9 +5,4 @@ import { Component } from '@angular/core';
     styleUrls: ['./header.component.scss'],
     templateUrl: './header.component.html'
 })
-export class HeaderComponent {
-    appMenuOpen = false;
-    toggleOpenMenu() {
-        this.appMenuOpen = !this.appMenuOpen;
-    }
-}
+export class HeaderComponent { }
