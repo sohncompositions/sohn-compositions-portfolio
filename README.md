@@ -6,6 +6,8 @@
 - **2-29-2020** App layout settled, mock icons and menu modals implemented
 
 ### Todo
+- Move social media icons to contact page
+- Add 'now playing' section
 - Service for configuration, email, and audio player
 - Style/Layout with mock data/icons/files
 - Audio Player Functionality

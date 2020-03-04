@@ -1,20 +1,19 @@
-@import "../../responsive.scss";
-
 p {
   text-align: center;
-  vertical-align: middle;
+  margin: auto;
 }
-.social-media-links {
-  display: flex;
-  justify-content: space-evenly;
+
+.now-playing {
+  text-align: right;
+  flex: 1;
+}
+
+.copyright {
+  padding: 1rem;
+}
+mat-toolbar {
+  padding: 0.5rem;
 }
 app-audio-player {
   width: 100%;
-}
-
-@media (min-width: $breakpoint-sm) {
-  .social-media-links {
-    width: 65%;
-    margin: auto;
-  }
 }

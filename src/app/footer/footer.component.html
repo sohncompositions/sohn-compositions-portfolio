@@ -1,41 +1,12 @@
 <footer>
     <mat-toolbar>
+        <mat-toolbar-row *ngIf='!!audioService.currentTrack'>
+            <p class='mat-body-2 now-playing'>Now Playing: {{audioService.currentTrack.title}}</p>
+        </mat-toolbar-row>
         <mat-toolbar-row>
             <app-audio-player></app-audio-player>
         </mat-toolbar-row>
     </mat-toolbar>
-    <div class='social-media-links'>
-        <a mat-icon-button href='http://google.com'>
-            <mat-icon>
-                face
-            </mat-icon>
-        </a>
-        <a mat-icon-button href='http://google.com'>
-            <mat-icon>
-                face
-            </mat-icon>
-        </a>
-        <a mat-icon-button href='http://google.com'>
-            <mat-icon>
-                face
-            </mat-icon>
-        </a>
-        <a mat-icon-button href='http://google.com'>
-            <mat-icon>
-                face
-            </mat-icon>
-        </a>
-        <a mat-icon-button href='http://google.com'>
-            <mat-icon>
-                face
-            </mat-icon>
-        </a>
-        <a mat-icon-button href='http://google.com'>
-            <mat-icon>
-                face
-            </mat-icon>
-        </a>
-    </div>
     <p class='mat-caption copyright'>
         ©2020 Sohn Compositions
     </p>

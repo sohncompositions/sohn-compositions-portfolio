@@ -1,0 +1,47 @@
+.contact-container {
+  height: 100%;
+}
+
+.email-form {
+  display: grid;
+  grid-template-areas:
+    "f ."
+    "s s"
+    "b b"
+    "sub sub";
+}
+input,
+textarea {
+  width: 100%;
+}
+input {
+  height: 2rem;
+}
+textarea {
+  height: 9rem;
+}
+.email-content {
+  padding: 0.8rem;
+}
+.from {
+  grid-area: f;
+}
+.subject {
+  grid-area: s;
+}
+.email-body {
+  grid-area: b;
+}
+.sub {
+  grid-area: sub;
+  display: flex;
+  justify-content: flex-end;
+  button {
+    width: 100%;
+  }
+}
+
+.social-media-links {
+  display: flex;
+  justify-content: space-between;
+}
