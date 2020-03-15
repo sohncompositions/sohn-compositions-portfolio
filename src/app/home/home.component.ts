@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AudioService } from '../services/audio.service';
+import { ConfigService } from '../services/config.service';
 
 @Component({
     selector: 'app-home',
@@ -9,10 +10,16 @@ import { AudioService } from '../services/audio.service';
 export class HomeComponent {
     categories: string[];
     selectedCategoryIndex: number;
+    pageConfig: IConfig['homePage'];
 
-    constructor(private audioService: AudioService) {
+    constructor(
+        private audioService: AudioService,
+        private configService: ConfigService
+    ) {
         this.categories = this.audioService.categories;
+        this.pageConfig = this.configService.config.homePage;
     }
+
     determineColor(i: number) {
         return i === this.selectedCategoryIndex ? 'accent' : 'primary';
     }

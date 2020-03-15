@@ -10,8 +10,8 @@ export class AudioService {
     categories: string[];
 
     constructor(private configService: ConfigService) {
-        this.tracks = this.configService.config.tracks;
-        this.categories = this.configService.config.homePageCategories;
+        this.tracks = this.configService.config.audioPlayer.tracks;
+        this.categories = this.configService.config.audioPlayer.categories;
     }
 
     changeTrack(track: ITrack) { this.currentTrack = track; }

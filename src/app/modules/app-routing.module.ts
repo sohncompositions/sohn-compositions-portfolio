@@ -9,7 +9,7 @@ import { MaterialUIModule } from './material-ui.module';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'bio', component: BioComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
 ];
 
 @NgModule({

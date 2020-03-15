@@ -1,53 +1,10 @@
-<div class='contact-container'>
-    <div>
-        <h2 class='mat-h2'>Contact Me</h2>
-    </div>
-    <div>
-        <form class='email-form'>
-            <div class='from email-content'>
-                <input type="phone">
-            </div>
-            <div class='subject email-content'>
-                <input mat-input type="text">
-            </div>
-            <div class='email-body email-content'>
-                <textarea></textarea>
-            </div>
-            <div class='sub email-content'>
-                <button color='primary' mat-stroked-button>Send</button>
-            </div>
-        </form>
-    </div>
-    <div class='social-media-links'>
-        <a mat-icon-button href='http://google.com'>
-            <mat-icon>
-                face
-            </mat-icon>
-        </a>
-        <a mat-icon-button href='http://google.com'>
-            <mat-icon>
-                face
-            </mat-icon>
-        </a>
-        <a mat-icon-button href='http://google.com'>
-            <mat-icon>
-                face
-            </mat-icon>
-        </a>
-        <a mat-icon-button href='http://google.com'>
-            <mat-icon>
-                face
-            </mat-icon>
-        </a>
-        <a mat-icon-button href='http://google.com'>
-            <mat-icon>
-                face
-            </mat-icon>
-        </a>
-        <a mat-icon-button href='http://google.com'>
-            <mat-icon>
-                face
-            </mat-icon>
-        </a>
-    </div>
-</div>
+<section class='full-height column'>
+    <h1 class='mat-display-3'>{{pageConfig.title}}</h1>
+    <h3 class='mat-subheading-1'>{{pageConfig.subtitle}}</h3>
+    <form action="">
+        <input mat-input type="email" placeholder='From'>
+        <input mat-input type="text" placeholder='Subject'>
+        <textarea mat-input type="text" placeholder='Message'></textarea>
+        <button color='primary' mat-stroked-button>Send</button>
+    </form>
+</section>

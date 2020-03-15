@@ -1,19 +1,32 @@
-declare interface ITrack {
+declare interface ILogo extends IAsset { }
+declare interface IIcon extends IAsset { }
+declare interface IAsset {
+    filename: string;
+}
+declare interface IPageConfig {
+    title: string;
+    subtitle: string;
+}
+
+declare interface IAudioPlayer {
+    categories: string[],
+    tracks: ITrack[]
+}
+
+declare interface ITrack extends IAsset {
     title: string;
     category: string;
-    src: string;
 }
 
-declare interface ILogo {
-    url: string;
-}
+declare interface IReferral { }
+declare interface IHeader { }
+declare interface IHomePage extends IPageConfig { }
 
-declare interface IContactInfo {
-    email: string;
-    phone: string;
-    firstName: string;
-    lastName: string;
-    company: string;
+declare interface IBioPage extends IPageConfig {
+    referrals: IReferral[];
+}
+declare interface IContactPage extends IPageConfig {
+
 }
 
 declare interface ISocialMediaLink {
@@ -22,9 +35,10 @@ declare interface ISocialMediaLink {
 }
 
 declare interface IConfig {
-    homePageCategories: string[];
-    tracks: ITrack[];
-    logo: ILogo;
-    contactInfo: IContactInfo;
+    audioPlayer: IAudioPlayer;
+    header: IHeader;
+    homePage: IHomePage;
+    bioPage: IBioPage;
+    contactPage: IContactPage;
     socialMediaLinks: ISocialMediaLink[];
 }

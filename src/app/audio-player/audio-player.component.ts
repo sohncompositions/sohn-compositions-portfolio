@@ -14,6 +14,7 @@ export class AudioPlayerComponent {
         this.audioService.changeTrack(track);
     }
     getAudioSource() {
-        return this.audioService.currentTrack ? this.audioService.currentTrack.src : '';
+        const path = '../../assets/audio/';
+        return this.audioService.currentTrack ? path + this.audioService.currentTrack.filename : '';
     }
 }
