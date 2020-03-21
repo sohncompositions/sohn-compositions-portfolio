@@ -56,17 +56,18 @@
     "contactPage": {
         "title": "Title",
         "subtitle": "Subtitle",
+        "emailServerURL": "http://localhost:8080",
         "fields": {
             "from": {
-                "type": "string",
+                "type": "text",
                 "required": true
             },
             "subject": {
-                "type": "string",
+                "type": "text",
                 "required": true
             },
             "message": {
-                "type": "string",
+                "type": "text",
                 "required": true
             }
         }

@@ -11,7 +11,7 @@ export class ContactService {
         private formBuilder: FormBuilder
     ) { }
 
-    private _buildControlsConfig(pageConfig: IContactPage): { [K: string]: FormControl } {
+    private _buildFormControlsConfig(pageConfig: IContactPage): { [K: string]: FormControl } {
         return Object.keys(pageConfig.fields).reduce<{ [K: string]: FormControl }>((t, k) => {
             return {
                 ...t,
@@ -26,7 +26,7 @@ export class ContactService {
 
     buildContactForm(pageConfig: IContactPage): FormGroup {
         return this.formBuilder.group(
-            this._buildControlsConfig(pageConfig),
+            this._buildFormControlsConfig(pageConfig),
         );
     }
 
