@@ -7,7 +7,7 @@ import { ConfigService } from '../services/config.service';
     styleUrls: ['./bio.component.scss']
 })
 export class BioComponent {
-    pageConfig: IConfig['contactPage'];
+    pageConfig: IConfig['bioPage'];
     constructor(
         private configService: ConfigService
     ) {

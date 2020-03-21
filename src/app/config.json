@@ -55,7 +55,21 @@
     },
     "contactPage": {
         "title": "Title",
-        "subtitle": "Subtitle"
+        "subtitle": "Subtitle",
+        "fields": {
+            "from": {
+                "type": "string",
+                "required": true
+            },
+            "subject": {
+                "type": "string",
+                "required": true
+            },
+            "message": {
+                "type": "string",
+                "required": true
+            }
+        }
     },
     "socialMediaLinks": [
         {

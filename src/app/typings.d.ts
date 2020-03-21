@@ -25,8 +25,19 @@ declare interface IHomePage extends IPageConfig { }
 declare interface IBioPage extends IPageConfig {
     referrals: IReferral[];
 }
-declare interface IContactPage extends IPageConfig {
 
+declare type FieldTypes = 'text' | 'date' | 'number'; // Add more later
+declare interface IField {
+    type: FieldTypes;
+    required?: boolean;
+}
+
+declare interface IFields {
+    [K: string]: IField;
+}
+
+declare interface IContactPage extends IPageConfig {
+    fields: IFields;
 }
 
 declare interface ISocialMediaLink {

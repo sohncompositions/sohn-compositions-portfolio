@@ -24,7 +24,7 @@ import { SocialMediaComponent } from './social-media/social-media.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialUIModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
