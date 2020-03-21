@@ -1,0 +1,20 @@
+{
+  "name": "sohn-compositions-emailer",
+  "version": "1.0.0",
+  "description": "Email server for sending emails via portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon"
+  },
+  "author": "Ben Turner",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
