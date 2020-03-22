@@ -10,9 +10,9 @@
   "author": "Ben Turner",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^6.5.5",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "nodemailer": "^6.4.6"
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
