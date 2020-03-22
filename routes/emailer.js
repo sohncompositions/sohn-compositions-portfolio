@@ -9,4 +9,4 @@ emailerRoute.route('/')
         })
     })
 
-module.exports = emailerRoute;
+module.exports.emailerRoute = emailerRoute;

@@ -1,10 +1,14 @@
 const express = require('express');
-const config = require('./config');
-const emailerRoute = require('./routes/emailer');
+const { emailerRoute } = require('./routes/emailer');
+const { handleError } = require('./middleware/error');
+const { validateApiKey } = require('./middleware/auth');
+require('./config');
 
 const app = express();
 
 app.use(express.json());
-app.use('/emailer', emailerRoute)
+app.use(validateApiKey);
+app.use('/emailer', emailerRoute);
+app.use(handleError);
 
-module.exports = app;
+module.exports.app = app;
