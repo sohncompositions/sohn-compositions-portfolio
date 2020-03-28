@@ -1,0 +1,33 @@
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+.now-playing {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+p {
+  margin: auto 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.now-playing-text {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+mat-toolbar {
+  padding: 0.5rem;
+}
+
+app-audio-player {
+  width: 100%;
+}

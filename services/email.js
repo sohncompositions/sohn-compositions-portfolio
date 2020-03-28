@@ -8,8 +8,8 @@ module.exports = {
             from: process.env.EMAIL,
             subject: `(Email sent from sohncompositions.com) ${config.subject}`,
             html: `
-            <h5>From: ${config.from}</h5>
-            <p>${config.message}<p/>
+                <h5>From: ${config.from}</h5>
+                <p>${config.message}<p/>
             `,
         })
     }

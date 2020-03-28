@@ -1,0 +1,64 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+app-root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.row-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.center-v {
+  justify-items: center;
+}
+
+.center-h {
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.auto-fill {
+  flex: 1;
+}
+
+.spacer {
+  flex: auto;
+}
+
+.pull-right {
+  justify-content: flex-end;
+}

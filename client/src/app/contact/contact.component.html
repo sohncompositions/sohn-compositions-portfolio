@@ -1,0 +1,10 @@
+<section class='full-height column'>
+    <h1 class='mat-display-3'>{{pageConfig.title}}</h1>
+    <h3 class='mat-subheading-1'>{{pageConfig.subtitle}}</h3>
+    <form class='column' [formGroup]='contactForm' (ngSubmit)='handleSubmit($event)'>
+        <input mat-input formControlName='from' placeholder='From'>
+        <input mat-input formControlName='subject' placeholder='Subject'>
+        <textarea mat-input formControlName='message' placeholder='Message'></textarea>
+        <button type='submit' [disabled]='!contactForm.valid' color='primary' mat-stroked-button>Send</button>
+    </form>
+</section>

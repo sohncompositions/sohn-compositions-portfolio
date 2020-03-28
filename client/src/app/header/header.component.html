@@ -1,0 +1,20 @@
+<mat-toolbar>
+    <div class='toolbar-item'>
+        <button color='accent' mat-icon-button [matMenuTriggerFor]='menu'>
+            <mat-icon>
+                menu
+            </mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink='/'>Home</button>
+            <button mat-menu-item routerLink='/bio'>Bio</button>
+            <button mat-menu-item routerLink='/contact'>Contact</button>
+        </mat-menu>
+    </div>
+    <div class='toolbar-item spacer'></div>
+    <div class='toolbar-item'>
+        <button color='accent' mat-icon-button routerLink='/'>
+            <mat-icon svgIcon='sohn_logo'></mat-icon>
+        </button>
+    </div>
+</mat-toolbar>
