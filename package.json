@@ -8,7 +8,7 @@
     "dev": "nodemon",
     "start": "node .",
     "build": "cd ./client && npm install",
-    "heroku-postbuild": "cd ./client && npm install --dev && ./node_modules/.bin/ng build"
+    "heroku-postbuild": "cd ./client && npm install --dev && ./node_modules/.bin/ng build --prod"
   },
   "author": "Ben Turner",
   "license": "ISC",
