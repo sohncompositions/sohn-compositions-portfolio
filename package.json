@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon",
-    "start": "node ."
+    "start": "node .",
+    "build": "cd ./client && ng build"
   },
   "author": "Ben Turner",
   "license": "ISC",
@@ -17,5 +18,10 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "client/*"
+    ]
   }
 }
