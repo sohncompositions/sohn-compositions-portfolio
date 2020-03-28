@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon",
     "start": "node .",
-    "build": "cd ./client && npm install && npm run build --prod && cd ../ && exit 0"
+    "build": "cd ./client && npm install",
+    "heroku-postbuild": "cd client ./ && ng build --configuration=production"
   },
   "author": "Ben Turner",
   "license": "ISC",
