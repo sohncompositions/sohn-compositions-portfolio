@@ -40,7 +40,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": false,
+              "optimization": true,
               "outputHashing": "none",
               "sourceMap": false,
               "extractCss": true,
@@ -50,8 +50,8 @@
               "extractLicenses": false,
               "statsJson": false,
               "progress": false,
-              "vendorChunk": true,
-              "buildOptimizer": false,
+              "vendorChunk": false,
+              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
