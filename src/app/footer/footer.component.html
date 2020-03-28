@@ -1,0 +1,17 @@
+<mat-toolbar>
+    <mat-toolbar-row class='overflow-auto'>
+        <div class='now-playing-text'>
+            <p class='mat-body-2 col-6' *ngIf='!!audioService.currentTrack'>
+                <mat-icon color='primary' class='now-playing' fontSet="fa" fontIcon="fa-music"></mat-icon>
+                <span [matTooltip]="audioService.currentTrack.title">
+                    {{audioService.currentTrack.title}}
+                </span>
+            </p>
+        </div>
+        <div class='spacer'></div>
+        <app-social-media class='auto-fill pull-right'></app-social-media>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <app-audio-player></app-audio-player>
+    </mat-toolbar-row>
+</mat-toolbar>

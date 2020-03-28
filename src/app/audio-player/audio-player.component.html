@@ -1,0 +1,10 @@
+<div class='audio-player-container'>
+    <mat-menu #playlistMenu='matMenu'>
+        <button mat-menu-item *ngFor='let track of audioService.tracks'
+            (click)='handleSelectTrack(track)'>{{track.title}}</button>
+    </mat-menu>
+    <button color='accent' mat-icon-button [matMenuTriggerFor]='playlistMenu'>
+        <mat-icon>list</mat-icon>
+    </button>
+    <audio #audioPlayer id='audio-player' [src]="getAudioSource()" controls controlslist='nodownload' autoplay></audio>
+</div>

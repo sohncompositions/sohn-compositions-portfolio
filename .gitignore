@@ -40,6 +40,10 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+CNAME
+url.txt
+tmp.txt
+*.bat
 
 # System Files
 .DS_Store

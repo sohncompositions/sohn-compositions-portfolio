@@ -1,0 +1,11 @@
+<section class='full-height column'>
+    <div id='logo'></div>
+    <h1 class='mat-display-3'>{{pageConfig.title}}</h1>
+    <h3 class='mat-subheading-1'>{{pageConfig.subtitle}}</h3>
+    <div class='row-wrap'>
+        <button [color]='determineColor(i)' mat-stroked-button *ngFor='let category of categories; index as i'
+            (click)='onClick(i, category)'>
+            {{category}}
+        </button>
+    </div>
+</section>
