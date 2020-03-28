@@ -38,7 +38,10 @@ declare interface IFields {
 
 declare interface IContactPage extends IPageConfig {
     fields: IFields;
-    emailServerURL: string;
+    emailServer: {
+        url: string;
+        email: string;
+    }
 }
 
 declare interface ISocialMediaLink {

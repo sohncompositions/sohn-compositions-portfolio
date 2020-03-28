@@ -56,7 +56,10 @@
     "contactPage": {
         "title": "Title",
         "subtitle": "Subtitle",
-        "emailServerURL": "http://localhost:8080",
+        "emailServer": {
+            "url": "/",
+            "email": "bbgrabbag@gmail.com"
+        },
         "fields": {
             "from": {
                 "type": "text",
