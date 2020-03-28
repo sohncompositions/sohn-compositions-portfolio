@@ -10,6 +10,7 @@
 ### Todo
 - Contact Page
   - Combine front end into server project
+  - Add Sender Name to form field
   - Email server
   - Connect form to email
 - Bio Page
