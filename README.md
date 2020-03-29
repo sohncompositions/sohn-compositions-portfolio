@@ -10,9 +10,11 @@
 
 ### Todo
 - Contact Page
-  - Add Sender Name to form field
-  - Connect form to email server
 - Bio Page
+  - Configuration
+  - General styling of cards
+- General
+  - Responsiveness for each page at 600px, 900px, >= 1200px
 
 ### Notes (3/15/2020)
 - Configure proxy server in dev?

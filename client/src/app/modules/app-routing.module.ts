@@ -7,7 +7,6 @@ import { CommonModule } from '@angular/common';
 import { MaterialUIModule } from './material-ui.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'bio', component: BioComponent },
@@ -20,7 +19,7 @@ const routes: Routes = [
     CommonModule,
     MaterialUIModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   exports: [RouterModule],
   declarations: [

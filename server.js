@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.static(sources.CLIENT_PATH));
-app.use('/emailer', validateApiKey, emailerRoute);
+app.use('/api/emailer', emailerRoute);
 app.get('*', (req, res) => res.sendFile(sources.CLIENT_HTML))
 app.use(handleError);
 

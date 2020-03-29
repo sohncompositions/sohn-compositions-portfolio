@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "dev": "ng serve --proxy-config proxy.conf.json",
     "postinstall": "ng build --aot --prod"
   },
   "private": true,

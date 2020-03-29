@@ -30,18 +30,23 @@ declare type FieldTypes = 'text' | 'date' | 'number'; // Add more later
 declare interface IField {
     type: FieldTypes;
     required?: boolean;
+    email?: boolean;
 }
 
 declare interface IFields {
     [K: string]: IField;
 }
 
+declare interface IEmailServer {
+    url: string;
+    email: string;
+    successMessage: string;
+    errorMessage: string;
+}
+
 declare interface IContactPage extends IPageConfig {
     fields: IFields;
-    emailServer: {
-        url: string;
-        email: string;
-    }
+    emailServer: IEmailServer
 }
 
 declare interface ISocialMediaLink {

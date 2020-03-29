@@ -1,10 +1,45 @@
 <section class='full-height column'>
-    <h1 class='mat-display-3'>{{pageConfig.title}}</h1>
+    <h1 class='mat-display-1'>{{pageConfig.title}}</h1>
     <h3 class='mat-subheading-1'>{{pageConfig.subtitle}}</h3>
-    <form class='column' [formGroup]='contactForm' (ngSubmit)='handleSubmit($event)'>
-        <input mat-input formControlName='from' placeholder='From'>
-        <input mat-input formControlName='subject' placeholder='Subject'>
-        <textarea mat-input formControlName='message' placeholder='Message'></textarea>
+    <div *ngIf='submitting'>
+        <p>...Sending</p>
+        <div class='row center-h'>
+            <mat-spinner></mat-spinner>
+        </div>
+    </div>
+    <form *ngIf='!submitting && !submitted' class='column' [formGroup]='contactForm' (ngSubmit)='handleSubmit($event)'>
+        <mat-form-field appearance="fill">
+            <mat-label>Your Name</mat-label>
+            <input matInput formControlName='name' placeholder='Ex. John Doe' required>
+            <mat-error *ngIf="contactForm.controls.name.invalid">
+                {{this.displayError('name')}}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Your Email</mat-label>
+            <input matInput formControlName='sender' placeholder='Ex. johndoe@example.com' required>
+            <mat-error *ngIf="contactForm.controls.sender.invalid">
+                {{this.displayError('sender')}}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Subject</mat-label>
+            <input matInput formControlName='subject' required>
+            <mat-error *ngIf="contactForm.controls.subject.invalid">
+                {{this.displayError('subject')}}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Your Message</mat-label>
+            <textarea matInput formControlName='message' required></textarea>
+            <mat-error *ngIf="contactForm.controls.message.invalid">
+                {{this.displayError('message')}}
+            </mat-error>
+        </mat-form-field>
         <button type='submit' [disabled]='!contactForm.valid' color='primary' mat-stroked-button>Send</button>
     </form>
+    <div *ngIf='submitted && !submitting'>
+        <p *ngIf='success' class='mat-body-strong'>{{success}}</p>
+        <p *ngIf='error' class='mat-body-strong mat-error'>{{error}}</p>
+    </div>
 </section>

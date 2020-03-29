@@ -58,12 +58,19 @@
         "subtitle": "Subtitle",
         "emailServer": {
             "url": "/",
-            "email": "bbgrabbag@gmail.com"
+            "email": "bbgrabbag@gmail.com",
+            "successMessage": "Your email has been sent!",
+            "errorMessage": "Sorry! There was a problem sending the email."
         },
         "fields": {
-            "from": {
+            "name": {
                 "type": "text",
                 "required": true
+            },
+            "sender": {
+                "type": "text",
+                "required": true,
+                "email": true
             },
             "subject": {
                 "type": "text",
