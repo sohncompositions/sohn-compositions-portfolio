@@ -49,8 +49,8 @@
         "subtitle": "Subtitle"
     },
     "bioPage": {
-        "title": "Title",
-        "subtitle": "Subtitle",
+        "title": "Bio",
+        "subtitle": "Reviews",
         "referrals": [
             {
                 "name": "Test",
@@ -85,8 +85,9 @@
         ]
     },
     "contactPage": {
-        "title": "Title",
-        "subtitle": "Subtitle",
+        "title": "Contact Me",
+        "subtitle": "",
+        "formCaption": "Please contact me for more information",
         "emailServer": {
             "url": "/",
             "email": "bbgrabbag@gmail.com",
@@ -115,19 +116,19 @@
     },
     "socialMediaLinks": [
         {
-            "url": "http://localhost:4200/",
+            "url": "https://www.youtube.com/sohncompositions",
             "iconLabel": "youtube"
         },
         {
-            "url": "http://localhost:4200/",
+            "url": "https://www.linkedin.com/in/sohncompositions/",
             "iconLabel": "linkedin"
         },
         {
-            "url": "http://localhost:4200/",
+            "url": "https://www.facebook.com/sohncompositions/",
             "iconLabel": "facebook"
         },
         {
-            "url": "http://localhost:4200/",
+            "url": "https://www.instagram.com/sohncompositions/",
             "iconLabel": "instagram"
         }
     ]

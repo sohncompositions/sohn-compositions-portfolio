@@ -1,3 +1,18 @@
+@import "../../styles/responsive.scss";
+
 p {
   text-align: center;
+}
+label {
+  text-align: end;
+}
+input {
+  height: 0.9rem;
+}
+
+@media (min-width: $breakpoint-sm) {
+  .form-container {
+    margin: auto;
+    width: $breakpoint-sm;
+  }
 }

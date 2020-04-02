@@ -51,7 +51,8 @@ declare interface IEmailServer {
 
 declare interface IContactPage extends IPageConfig {
     fields: IFields;
-    emailServer: IEmailServer
+    emailServer: IEmailServer;
+    formCaption: string;
 }
 
 declare interface ISocialMediaLink {
