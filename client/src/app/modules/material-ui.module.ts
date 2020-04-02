@@ -7,6 +7,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
         MatTooltipModule,
         MatFormFieldModule,
         MatInputModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        MatCardModule
     ],
 })
 

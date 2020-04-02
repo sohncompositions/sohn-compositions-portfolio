@@ -18,7 +18,12 @@ declare interface ITrack extends IAsset {
     category: string;
 }
 
-declare interface IReferral { }
+declare interface IReferral {
+    name: string;
+    company: string;
+    avatarFilename: string;
+    quote: string;
+}
 declare interface IHeader { }
 declare interface IHomePage extends IPageConfig { }
 

@@ -13,6 +13,9 @@ app-root {
   flex-direction: column;
 }
 
+.grid {
+  display: grid;
+}
 .column {
   display: flex;
   flex-direction: column;

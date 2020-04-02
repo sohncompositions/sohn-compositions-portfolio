@@ -1,0 +1,25 @@
+@import "../../styles/responsive.scss";
+
+.italic {
+    font-style: italic;
+}
+
+section {
+    margin: auto;
+}
+
+mat-card {
+    margin: 1rem;
+}
+
+@media (min-width: $breakpoint-sm) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

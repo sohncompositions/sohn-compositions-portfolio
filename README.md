@@ -9,13 +9,12 @@
 - **3-28-2020** Server and Client combined
 
 ### Todo
-- Contact Page
 - Bio Page
   - Configuration
   - General styling of cards
 - General
   - Responsiveness for each page at 600px, 900px, >= 1200px
+  - Build theme
+  - import actual images/logos
 
 ### Notes (3/15/2020)
-- Configure proxy server in dev?
-- API key or whiteList hostname?

@@ -1,12 +1,20 @@
+@import "../../styles/responsive.scss";
+
 button {
   padding: 0 2rem 0 2rem;
   width: 33%;
 }
 
 #logo {
-  flex: 0.5;
+  flex: 1;
+  max-height: 18rem;
   background-image: url("../../assets/images/sohn-wallpaper.png");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+section {
+  max-width: $breakpoint-md;
+  margin: auto;
 }

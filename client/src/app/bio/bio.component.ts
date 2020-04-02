@@ -13,4 +13,8 @@ export class BioComponent {
     ) {
         this.pageConfig = this.configService.config.bioPage;
     }
+
+    resolveFilename(filename: string): string {
+        return `../../assets/images/${filename}`;
+    }
 }

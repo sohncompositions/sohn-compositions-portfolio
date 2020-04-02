@@ -1,4 +1,16 @@
 <div class='full-height column'>
     <h1 class='mat-display-3'>{{pageConfig.title}}</h1>
     <h3 class='mat-subheading-1'>{{pageConfig.subtitle}}</h3>
+    <section class='grid'>
+        <mat-card *ngFor='let referral of pageConfig.referrals'>
+            <mat-card-title-group>
+                <mat-card-title>{{referral.name}}</mat-card-title>
+                <mat-card-subtitle>{{referral.company}}</mat-card-subtitle>
+                <img mat-card-sm-image [src]="resolveFilename(referral.avatarFilename)">
+            </mat-card-title-group>
+            <mat-card-content>
+                <p class='italic'>"{{referral.quote}}"</p>
+            </mat-card-content>
+        </mat-card>
+    </section>
 </div>

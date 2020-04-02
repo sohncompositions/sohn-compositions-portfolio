@@ -51,7 +51,38 @@
     "bioPage": {
         "title": "Title",
         "subtitle": "Subtitle",
-        "referrals": []
+        "referrals": [
+            {
+                "name": "Test",
+                "company": "Test, Inc.",
+                "avatarFilename": "referral1.png",
+                "quote": "lorem ipsum lorem ipsum lorem ipsum ergaerg aerg aerg aerg aerg aerg aerg aerg aerg aerg."
+            },
+            {
+                "name": "Test1",
+                "company": "Test1, Inc.",
+                "avatarFilename": "referral1.png",
+                "quote": "lorem ipsum lorem ipsum lorem ipsum ergaerg aerg aerg aerg aerg aerg aerg aerg aerg aerg."
+            },
+            {
+                "name": "Test2",
+                "company": "Test2, Inc.",
+                "avatarFilename": "referral1.png",
+                "quote": "lorem ipsum lorem ipsum lorem ipsum ergaerg aerg aerg aerg aerg aerg aerg aerg aerg aerg."
+            },
+            {
+                "name": "Test3",
+                "company": "Test3, Inc.",
+                "avatarFilename": "referral1.png",
+                "quote": "lorem ipsum lorem ipsum lorem ipsum ergaerg aerg aerg aerg aerg aerg aerg aerg aerg aerg."
+            },
+            {
+                "name": "Test4",
+                "company": "Test4, Inc.",
+                "avatarFilename": "referral1.png",
+                "quote": "lorem ipsum lorem ipsum lorem ipsum ergaerg aerg aerg aerg aerg aerg aerg aerg aerg aerg."
+            }
+        ]
     },
     "contactPage": {
         "title": "Title",
