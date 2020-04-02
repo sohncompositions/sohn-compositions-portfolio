@@ -30,6 +30,11 @@ export class ContactComponent {
         if (formControl.hasError('email')) { return 'This field is not a valid email format'; }
     }
 
+    private onSubmissionComplete() {
+        this.submitted = true;
+        this.submitting = false;
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         this.submitting = true;
@@ -37,12 +42,11 @@ export class ContactComponent {
             .subscribe(() => {
                 this.error = null;
                 this.success = this.pageConfig.emailServer.successMessage;
+                this.onSubmissionComplete();
             }, () => {
                 this.error = this.pageConfig.emailServer.errorMessage;
                 this.success = null;
-            }, () => {
-                this.submitted = true;
-                this.submitting = false;
+                this.onSubmissionComplete();
             });
     }
 }
