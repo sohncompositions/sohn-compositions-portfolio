@@ -20,6 +20,6 @@ mat-card {
 
 @media (min-width: $breakpoint-md) {
     .grid {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: auto auto auto;
     }
 }

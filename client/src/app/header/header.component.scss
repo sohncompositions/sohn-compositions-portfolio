@@ -1,3 +1,18 @@
+@import "../../styles/responsive.scss";
+
 .toolbar-item.spacer {
   flex: 1;
+}
+
+.show {
+  display: none;
+}
+
+@media (min-width: $breakpoint-sm) {
+  .hide {
+    display: none;
+  }
+  .show {
+    display: flex;
+  }
 }

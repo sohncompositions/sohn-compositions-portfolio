@@ -45,8 +45,8 @@
     },
     "header": {},
     "homePage": {
-        "title": "Title",
-        "subtitle": "Subtitle"
+        "title": "",
+        "subtitle": "Sohn Compositions is a music production company founded by Joshua Sohn, writing original music for advertising, film, games, and songs.  Music is carefully crafted with colors, rhythms, and melody that is tailored to your needs."
     },
     "bioPage": {
         "title": "Bio",
@@ -73,12 +73,6 @@
             {
                 "name": "Test3",
                 "company": "Test3, Inc.",
-                "avatarFilename": "referral1.png",
-                "quote": "lorem ipsum lorem ipsum lorem ipsum ergaerg aerg aerg aerg aerg aerg aerg aerg aerg aerg."
-            },
-            {
-                "name": "Test4",
-                "company": "Test4, Inc.",
                 "avatarFilename": "referral1.png",
                 "quote": "lorem ipsum lorem ipsum lorem ipsum ergaerg aerg aerg aerg aerg aerg aerg aerg aerg aerg."
             }

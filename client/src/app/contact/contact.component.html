@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class='form-container column'>
-        <label>{{pageConfig.formCaption}}</label>
+        <label *ngIf='!submitting && !submitted'>{{pageConfig.formCaption}}</label>
         <form *ngIf='!submitting && !submitted' class='column' [formGroup]='contactForm'
             (ngSubmit)='handleSubmit($event)'>
             <mat-form-field appearance="fill">
