@@ -7,14 +7,11 @@
 - **3-15-2020** Refactor layout, allow custom svgs/icons, reorganized config file, added social media icons and streamlined page configurations. Minor style updates/bug fixes
 - **3-21-2020** Contact form shell built
 - **3-28-2020** Server and Client combined
+- **4-2-2020** Responsive pages
 
 ### Todo
-- Bio Page
-  - Configuration
-  - General styling of cards
 - General
-  - Responsiveness for each page at 600px, 900px, >= 1200px
-  - Build theme
-  - import actual images/logos
+  - Change README to contain admin documentation/configuration steps
+  - Deploy under Github
 
-### Notes (3/15/2020)
+### Notes

@@ -28,7 +28,9 @@ declare interface IHeader { }
 declare interface IHomePage extends IPageConfig { }
 
 declare interface IBioPage extends IPageConfig {
+    bio: string[];
     referrals: IReferral[];
+    referralTitle: string;
 }
 
 declare type FieldTypes = 'text' | 'date' | 'number'; // Add more later
@@ -43,8 +45,6 @@ declare interface IFields {
 }
 
 declare interface IEmailServer {
-    url: string;
-    email: string;
     successMessage: string;
     errorMessage: string;
 }

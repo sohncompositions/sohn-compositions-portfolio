@@ -1,6 +1,9 @@
 @import "@angular/material/prebuilt-themes/pink-bluegrey.css";
 @import "~@angular/material/theming";
-@include mat-core();
+$custom-typography: mat-typography-config(
+    $font-family: '"Raleway", sans-serif;',
+);
+@include mat-core($custom-typography);
 
 $primary: (
     50: #ffe7e6,

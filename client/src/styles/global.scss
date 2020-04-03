@@ -65,3 +65,16 @@ app-root {
 .pull-right {
   justify-content: flex-end;
 }
+
+.fade-in {
+  animation: fade-in 0.8s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

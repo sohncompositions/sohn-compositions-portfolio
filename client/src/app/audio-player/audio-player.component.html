@@ -1,4 +1,4 @@
-<div class='audio-player-container'>
+<div class='audio-player-container fade-in'>
     <mat-menu #playlistMenu='matMenu'>
         <button mat-menu-item *ngFor='let track of audioService.tracks'
             (click)='handleSelectTrack(track)'>{{track.title}}</button>

@@ -1,7 +1,17 @@
-<div class='full-height column'>
+<div class='full-height column fade-in'>
     <h1 class='mat-display-3'>{{pageConfig.title}}</h1>
-    <h3 class='mat-subheading-1'>{{pageConfig.subtitle}}</h3>
-    <section class='grid'>
+    <section id='about'>
+        <h3 class='mat-subheading-1'>{{pageConfig.subtitle}}</h3>
+        <div>
+            <div id='headshot'></div>
+            <div id='bio'>
+                <p *ngFor='let paragraph of pageConfig.bio'>{{paragraph}}</p>
+            </div>
+        </div>
+    </section>
+    <mat-divider></mat-divider>
+    <h3 class='mat-subheading-1'>{{pageConfig.referralTitle}}</h3>
+    <section id='referrals' class='grid'>
         <mat-card *ngFor='let referral of pageConfig.referrals'>
             <mat-card-title-group>
                 <mat-card-title>{{referral.name}}</mat-card-title>
