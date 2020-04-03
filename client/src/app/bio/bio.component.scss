@@ -4,15 +4,33 @@
     font-style: italic;
 }
 
-section {
-    margin: auto;
-}
-
 mat-card {
     margin: 1rem;
 }
-
+mat-divider {
+    margin: 1rem;
+}
+#about {
+    width: auto;
+    margin: auto;
+}
+#headshot {
+    float: left;
+    width: 10rem;
+    height: 14rem;
+    background-image: url("../../assets/images/sohn-headshot.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#bio {
+    max-width: $breakpoint-md;
+}
 @media (min-width: $breakpoint-sm) {
+    #headshot {
+        width: 18rem;
+        height: 24rem;
+    }
     .grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -21,5 +39,8 @@ mat-card {
 @media (min-width: $breakpoint-md) {
     .grid {
         grid-template-columns: auto auto auto;
+    }
+    #bio {
+        max-width: auto;
     }
 }

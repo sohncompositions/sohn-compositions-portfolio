@@ -1,45 +1,25 @@
 {
     "audioPlayer": {
         "categories": [
-            "Sample",
-            "Demo",
-            "Test"
+            "Orchestra",
+            "Energetic",
+            "Uplifting"
         ],
         "tracks": [
             {
-                "title": "Demo Track 1 lorem ipsum long long long",
-                "category": "Sample",
-                "filename": "demo_1.mp3"
+                "title": "Soaring Mix",
+                "category": "Uplifting",
+                "filename": "soaring-mix.mp3"
             },
             {
-                "title": "Demo Track 2",
-                "category": "Sample",
-                "filename": "demo_2.mp3"
+                "title": "Songo Drums & The Beast",
+                "category": "Energetic",
+                "filename": "song-drums-and-the-beast.mp3"
             },
             {
-                "title": "Demo Track 3",
-                "category": "Demo",
-                "filename": "demo_3.mp3"
-            },
-            {
-                "title": "Demo Track 4",
-                "category": "Demo",
-                "filename": "demo_4.mp3"
-            },
-            {
-                "title": "Demo Track 5",
-                "category": "Test",
-                "filename": "demo_5.mp3"
-            },
-            {
-                "title": "Demo Track 6",
-                "category": "Test",
-                "filename": "demo_6.mp3"
-            },
-            {
-                "title": "Demo Track 7",
-                "category": "Test",
-                "filename": "demo_6.mp3"
+                "title": "Spooky Magical Fun",
+                "category": "Orchestra",
+                "filename": "spooky-magical-fun.mp3"
             }
         ]
     },
@@ -49,8 +29,14 @@
         "subtitle": "Sohn Compositions is a music production company founded by Joshua Sohn, writing original music for advertising, film, games, and songs.  Music is carefully crafted with colors, rhythms, and melody that is tailored to your needs."
     },
     "bioPage": {
-        "title": "Bio",
-        "subtitle": "Reviews",
+        "title": "Joshua Sohn",
+        "subtitle": "Film Composer / Songwriter",
+        "bio": [
+            "Hi! I team up with great artists, film makers, game developers and businesses to write music that help elevate, engage, and inspire their message.",
+            "My name is Joshua Sohn. Much of my early musical background was surrounded by the tune of church hymns and classical music.  The turning point of my musical journey came when my mother passed away at age 14. During this tough time, I used music to cope with my feelings and process her loss.  It became a source of healing and later on inspired me to do the same for others in my own music.",
+            "Fast forward to present day, equipped with a music degree from the University of Utah and a unique musical skill set, I found my calling as a composer.  Since 2014, I have premiered original music for the many film festivals including the Slamdance, Big Sky Documentary, Audience Awards, & Filmquest.  You will hear my music on various mediums from Youtube videos (Middara, board game) to TV commercials (U.S. Air Force Reserve, public service announcements).  I also contribute music to libraries such as Velvet Green Music (based in Santa Monica, California). "
+        ],
+        "referralTitle": "Reviews",
         "referrals": [
             {
                 "name": "Test",
@@ -79,12 +65,10 @@
         ]
     },
     "contactPage": {
-        "title": "Contact Me",
+        "title": "Contact",
         "subtitle": "",
-        "formCaption": "Please contact me for more information",
+        "formCaption": "Interested in working together? Send me an email!",
         "emailServer": {
-            "url": "/",
-            "email": "bbgrabbag@gmail.com",
             "successMessage": "Your email has been sent!",
             "errorMessage": "Sorry! There was a problem sending the email."
         },
