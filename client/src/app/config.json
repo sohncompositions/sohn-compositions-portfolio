@@ -72,7 +72,8 @@
     "contactPage": {
         "title": "Contact",
         "subtitle": "",
-        "formCaption": "Interested in working together? Send me an email!",
+        "email": "sohncompositions@gmail.com",
+        "formCaption": "Interested in working together? Send an email to sohncompositions@gmail.com ",
         "emailServer": {
             "successMessage": "Your email has been sent!",
             "errorMessage": "Sorry! There was a problem sending the email."
