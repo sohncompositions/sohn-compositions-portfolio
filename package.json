@@ -1,7 +1,7 @@
 {
-  "name": "sohn-compositions-emailer",
+  "name": "sohn-compositions-portfolio",
   "version": "1.0.0",
-  "description": "Email server for sending emails via portfolio site",
+  "description": "Portfolio website for Joshua Sohn",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
