@@ -1,15 +1,15 @@
 {
     "audioPlayer": {
         "categories": [
-            "Orchestra",
+            "Epic",
             "Energetic",
-            "Uplifting"
+            "Adventure"
         ],
         "tracks": [
             {
-                "title": "Soaring Mix",
-                "category": "Uplifting",
-                "filename": "soaring-mix.mp3"
+                "title": "Spooky Magical Fun",
+                "category": "Adventure",
+                "filename": "spooky-magical-fun.mp3"
             },
             {
                 "title": "Songo Drums & The Beast",
@@ -17,9 +17,14 @@
                 "filename": "songo-drums-and-the-beast.mp3"
             },
             {
-                "title": "Spooky Magical Fun",
-                "category": "Orchestra",
-                "filename": "spooky-magical-fun.mp3"
+                "title": "Soaring",
+                "category": "Adventure",
+                "filename": "soaring-mix.mp3"
+            },
+            {
+                "title": "The Octagon",
+                "category": "Epic",
+                "filename": "octagon-theme-v21-mp3.mp3"
             }
         ]
     },
