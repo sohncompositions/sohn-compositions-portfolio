@@ -5,3 +5,5 @@ Release Version 1.1.0
 - Add auto scrolling to long audio track names
 - About Me label
 - Email link interpolation
+- Speed up heroku build process
+- fix security alert
