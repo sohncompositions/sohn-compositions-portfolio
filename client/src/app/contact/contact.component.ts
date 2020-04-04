@@ -24,6 +24,9 @@ export class ContactComponent {
         this.contactForm = this.contactService.buildContactForm(this.pageConfig);
     }
 
+    renderFormCaption() {
+        return this.pageConfig.formCaption.replace(/{email}/g, this.pageConfig.email);
+    }
     displayError(formControlName: string) {
         const formControl = this.contactForm.controls[formControlName];
         if (formControl.hasError('required')) { return 'This field is required.'; }
