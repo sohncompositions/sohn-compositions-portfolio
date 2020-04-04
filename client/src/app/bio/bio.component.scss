@@ -16,8 +16,8 @@ mat-divider {
 }
 #headshot {
     float: left;
-    width: 10rem;
-    height: 14rem;
+    width: 9rem;
+    height: 12rem;
     background-image: url("../../assets/images/sohn-headshot.png");
     background-size: contain;
     background-position: center;
@@ -27,10 +27,6 @@ mat-divider {
     max-width: $breakpoint-md;
 }
 @media (min-width: $breakpoint-sm) {
-    #headshot {
-        width: 18rem;
-        height: 24rem;
-    }
     .grid {
         grid-template-columns: 1fr 1fr;
     }
