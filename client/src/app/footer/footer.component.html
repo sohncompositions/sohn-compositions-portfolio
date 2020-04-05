@@ -1,12 +1,15 @@
 <mat-toolbar>
-    <mat-toolbar-row class='overflow-auto'>
-        <div class='now-playing-text'>
-            <p class='mat-body-2 col-6' *ngIf='!!audioService.currentTrack'>
-                <mat-icon color='primary' class='now-playing' fontSet="fa" fontIcon="fa-music"></mat-icon>
-                <span [matTooltip]="audioService.currentTrack.title">
-                    {{audioService.currentTrack.title}}
-                </span>
-            </p>
+    <mat-toolbar-row class='align-baseline'>
+        <div id='now-playing' *ngIf='!!audioService.currentTrack' class='mat-body-2 overflow-hidden row align-center'>
+            <mat-icon color='primary' id='now-playing-icon' fontSet="fa" fontIcon="fa-music"></mat-icon>
+            <div #movieScrollWrapper id='movie-scroll-wrapper' class='overflow-hidden'>
+                <p #scrollingText [ngClass]="['scrolling-text', provideScrollClass()]"
+                    [matTooltip]="audioService.currentTrack.title">
+                    <span class='italic'>{{audioService.currentTrack.category}}</span>
+                    <span class='primary padded'>|</span>
+                    <span>{{audioService.currentTrack.title}}</span>
+                </p>
+            </div>
         </div>
         <div class='spacer'></div>
         <app-social-media class='auto-fill pull-right'></app-social-media>
