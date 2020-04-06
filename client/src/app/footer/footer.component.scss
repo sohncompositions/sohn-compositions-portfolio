@@ -1,3 +1,54 @@
+mat-toolbar {
+  padding: 0.5rem;
+}
+
+mat-toolbar-row {
+  padding: 0;
+}
+
+app-audio-player {
+  width: 100%;
+}
+
+#now-playing {
+  width: 75%;
+}
+
+.pulse {
+  animation: pulse 1s ease-in-out infinite;
+}
+#now-playing-icon {
+  opacity: 0.5;
+  padding: 0.5rem;
+}
+
+#movie-scroll-wrapper {
+  white-space: nowrap;
+  .scrolling-text {
+    width: fit-content;
+  }
+}
+
+.scrolling {
+  animation: scroll 8s linear infinite;
+}
+
+.align-baseline {
+  align-items: baseline;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(initial);
+  }
+  15% {
+    transform: translateX(-0.01%);
+  }
+  100% {
+    transform: translateX(-75%);
+  }
+}
+
 @keyframes pulse {
   0% {
     opacity: 0.5;
@@ -8,26 +59,4 @@
   100% {
     opacity: 0.5;
   }
-}
-.now-playing {
-  animation: pulse 2s ease-in-out infinite;
-}
-
-p {
-  margin: auto 0;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.now-playing-text {
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-mat-toolbar {
-  padding: 0.5rem;
-}
-
-app-audio-player {
-  width: 100%;
 }

@@ -15,6 +15,7 @@ export class ContactComponent {
     submitted = false;
     error: string;
     success: string;
+    interpolatedFormCaption: string[];
 
     constructor(
         private configService: ConfigService,
@@ -22,11 +23,13 @@ export class ContactComponent {
     ) {
         this.pageConfig = this.configService.config.contactPage;
         this.contactForm = this.contactService.buildContactForm(this.pageConfig);
+        this.interpolatedFormCaption = this.interpolateFormCaption();
     }
 
-    renderFormCaption() {
-        return this.pageConfig.formCaption.replace(/{email}/g, this.pageConfig.email);
+    interpolateFormCaption() {
+        return this.pageConfig.formCaption.split('{email}');
     }
+
     displayError(formControlName: string) {
         const formControl = this.contactForm.controls[formControlName];
         if (formControl.hasError('required')) { return 'This field is required.'; }

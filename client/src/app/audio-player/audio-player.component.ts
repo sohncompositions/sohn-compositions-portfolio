@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { AudioService } from '../services/audio.service';
 
 @Component({
@@ -8,6 +8,10 @@ import { AudioService } from '../services/audio.service';
 })
 
 export class AudioPlayerComponent {
+    playing = false;
+
+    @ViewChild('audioPlayer') audioPlayer: ElementRef<HTMLAudioElement>;
+
     constructor(public audioService: AudioService) { }
 
     handleSelectTrack(track) {
@@ -16,5 +20,23 @@ export class AudioPlayerComponent {
     getAudioSource() {
         const path = '../../assets/audio/';
         return this.audioService.currentTrack ? path + this.audioService.currentTrack.filename : '';
+    }
+
+    handleNext() {
+        this.audioService.goToNextTrack();
+    }
+
+    handlePrev() {
+        this.audioService.goToPrevTrack();
+    }
+
+    @HostListener('play')
+    handlePlay() {
+        this.audioService.setPlaying(true);
+    }
+
+    @HostListener('pause')
+    handlePause() {
+        this.audioService.setPlaying(false);
     }
 }
