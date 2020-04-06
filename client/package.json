@@ -4,12 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev": "ng serve --proxy-config proxy.conf.json",
-    "postinstall": "ng build --aot --prod"
+    "prod": "node --max_old_space_size=8096 ./node_modules/@angular/cli/bin/ng build --prod",
+    "postinstall": "npm run prod"
   },
   "private": true,
   "dependencies": {
