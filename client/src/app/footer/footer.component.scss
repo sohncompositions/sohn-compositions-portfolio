@@ -2,6 +2,10 @@ mat-toolbar {
   padding: 0.5rem;
 }
 
+mat-toolbar-row {
+  padding: 0;
+}
+
 app-audio-player {
   width: 100%;
 }
@@ -10,9 +14,12 @@ app-audio-player {
   width: 75%;
 }
 
+.pulse {
+  animation: pulse 1s ease-in-out infinite;
+}
 #now-playing-icon {
+  opacity: 0.5;
   padding: 0.5rem;
-  animation: pulse 2s ease-in-out infinite;
 }
 
 #movie-scroll-wrapper {
@@ -34,7 +41,7 @@ app-audio-player {
   0% {
     transform: translateX(initial);
   }
-  20% {
+  15% {
     transform: translateX(-0.01%);
   }
   100% {

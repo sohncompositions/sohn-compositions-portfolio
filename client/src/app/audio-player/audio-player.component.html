@@ -6,8 +6,14 @@
     <button mat-icon-button [matMenuTriggerFor]='playlistMenu'>
         <mat-icon>list</mat-icon>
     </button>
-    <button mat-icon-button>P</button>
-    <button mat-icon-button>S</button>
-    <button mat-icon-button>N</button>
-    <audio #audioPlayer id='audio-player' [src]="getAudioSource()" controls controlslist='nodownload' autoplay></audio>
+    <button mat-icon-button (click)='handlePrev()' [disabled]='!this.audioService.currentTrack'>
+        <mat-icon color='accent' fontSet="fas" fontIcon="fa-step-backward">
+        </mat-icon>
+    </button>
+    <button mat-icon-button (click)='handleNext()' [disabled]='!this.audioService.currentTrack'>
+        <mat-icon color='accent' fontSet="fas" fontIcon="fa-step-forward">
+        </mat-icon>
+    </button>
+    <audio #audioPlayer id='audio-player' (play)='handlePlay()' (pause)='handlePause()' [src]="getAudioSource()"
+        controls controlslist='nodownload' autoplay></audio>
 </div>

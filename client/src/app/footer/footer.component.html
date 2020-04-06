@@ -1,7 +1,8 @@
 <mat-toolbar>
     <mat-toolbar-row class='align-baseline'>
         <div id='now-playing' *ngIf='!!audioService.currentTrack' class='mat-body-2 overflow-hidden row align-center'>
-            <mat-icon color='primary' id='now-playing-icon' fontSet="fa" fontIcon="fa-music"></mat-icon>
+            <mat-icon color='primary' [ngClass]='[applyPulse()]' id='now-playing-icon' fontSet="fa" fontIcon="fa-music">
+            </mat-icon>
             <div #movieScrollWrapper id='movie-scroll-wrapper' class='overflow-hidden'>
                 <p #scrollingText [ngClass]="['scrolling-text', provideScrollClass()]"
                     [matTooltip]="audioService.currentTrack.title">

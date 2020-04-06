@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .audio-player-container {
   display: flex;
   align-items: center;
@@ -6,9 +8,11 @@
 audio {
   width: 100%;
 }
+
 audio::-webkit-media-controls-panel {
-  background-color: #7a8282;
+  // background-color: $accent;
 }
+
 audio::-webkit-media-controls-current-time-display,
 audio::-webkit-media-controls-time-remaining-display {
   color: #020404;

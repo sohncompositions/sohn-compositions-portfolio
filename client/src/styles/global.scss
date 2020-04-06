@@ -15,6 +15,10 @@ app-root {
   flex-direction: column;
 }
 
+mat-toolbar-row {
+  padding: 0;
+}
+
 .padded {
   padding: 0.5rem;
 }

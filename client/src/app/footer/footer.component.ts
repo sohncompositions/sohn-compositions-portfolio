@@ -1,4 +1,4 @@
-import { Component, AfterViewChecked, ViewChild, ElementRef } from '@angular/core';
+import { Component, AfterViewChecked, ViewChild, ElementRef, OnChanges } from '@angular/core';
 import { AudioService } from '../services/audio.service';
 
 @Component({
@@ -19,9 +19,16 @@ export class FooterComponent implements AfterViewChecked {
         this.applyMovieScroll();
     }
 
+    applyPulse() {
+        return this.audioService.playing ? 'pulse' : '';
+    }
+
     private applyMovieScroll() {
         const comparison = this.isScrollTextTooWide();
-        if (this.shouldScrollTextUpdate(comparison)) {
+        if (
+            this.shouldScrollTextUpdate(comparison) &&
+            this.audioService.playing
+        ) {
             this.setScrollingText(comparison);
         }
     }
@@ -40,14 +47,14 @@ export class FooterComponent implements AfterViewChecked {
         if (!this.movieScrollWrapper || !this.scrollingText) {
             return false;
         }
+
         const wrapperWidth = this.movieScrollWrapper.nativeElement.offsetWidth;
         const textWidth = this.scrollingText.nativeElement.offsetWidth;
         return textWidth > wrapperWidth;
     }
 
     provideScrollClass(): string {
-        return this.scrolling ? 'scrolling' : '';
+        return this.scrolling && this.audioService.playing ? 'scrolling' : '';
     }
 
-    // grab references to wrapper and text. if width of text is longer than wrapper, add 'scroll' class
 }
