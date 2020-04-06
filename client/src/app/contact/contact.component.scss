@@ -3,14 +3,17 @@
 p {
   text-align: center;
 }
-label {
-  text-align: end;
-}
+
 input {
   height: 0.9rem;
 }
 button[disabled]:hover {
   cursor: not-allowed;
+}
+
+#page-config-email {
+  padding: 0;
+  margin: 0;
 }
 
 @media (min-width: $breakpoint-sm) {
