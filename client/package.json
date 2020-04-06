@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev": "ng serve --proxy-config proxy.conf.json",
-    "prod": "node --max_old_space_size=8096 ./node_modules/@angular/cli/bin/ng build --prod",
+    "prod": "node --max_old_space_size=16384 ./node_modules/@angular/cli/bin/ng build --prod",
     "postinstall": "npm run prod"
   },
   "private": true,
