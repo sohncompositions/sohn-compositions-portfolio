@@ -8,7 +8,14 @@
         </div>
     </div>
     <div class='form-container column'>
-        <label *ngIf='!submitting && !submitted'>{{pageConfig.formCaption}}</label>
+        <label *ngIf='!submitting && !submitted'>
+            {{interpolatedFormCaption[0]}}
+            <ng-template [ngIf]='!!pageConfig.email'>
+                <a id='page-config-email' color='primary' class='italic' mat-button
+                    href='mailto:{{pageConfig.email}}'>{{pageConfig.email}}</a>
+            </ng-template>
+            {{interpolatedFormCaption[1]}}
+        </label>
         <form *ngIf='!submitting && !submitted' class='column' [formGroup]='contactForm'
             (ngSubmit)='handleSubmit($event)'>
             <mat-form-field appearance="fill">

@@ -73,7 +73,7 @@
         "title": "Contact",
         "subtitle": "",
         "email": "sohncompositions@gmail.com",
-        "formCaption": "Interested in working together? Send an email to sohncompositions@gmail.com or fill below",
+        "formCaption": "Interested in working together? Send an email to {email} or fill below",
         "emailServer": {
             "successMessage": "Your email has been sent!",
             "errorMessage": "Sorry! There was a problem sending the email."
