@@ -46,12 +46,12 @@
               "extractCss": false,
               "namedChunks": true,
               "showCircularDependencies": false,
-              "aot": false,
+              "aot": true,
               "extractLicenses": false,
               "statsJson": false,
               "progress": false,
               "vendorChunk": true,
-              "buildOptimizer": false,
+              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
