@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev": "ng serve --proxy-config proxy.conf.json",
-    "postinstall": "ng build --aot --prod"
+    "prod": "ng build --prod",
+    "postinstall": "npm run prod"
   },
   "private": true,
   "dependencies": {
