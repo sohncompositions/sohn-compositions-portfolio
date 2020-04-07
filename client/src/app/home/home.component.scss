@@ -12,7 +12,10 @@ button {
   background-position: center;
   background-repeat: no-repeat;
 }
-
+.auto-fill {
+  flex: 0;
+  margin: auto;
+}
 section {
   max-width: $breakpoint-md;
   margin: auto;
