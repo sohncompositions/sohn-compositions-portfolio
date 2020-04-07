@@ -43,14 +43,14 @@
               "optimization": true,
               "outputHashing": "none",
               "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
+              "extractCss": false,
+              "namedChunks": true,
               "showCircularDependencies": false,
               "aot": true,
               "extractLicenses": false,
               "statsJson": false,
               "progress": false,
-              "vendorChunk": false,
+              "vendorChunk": true,
               "buildOptimizer": true,
               "budgets": [
                 {
