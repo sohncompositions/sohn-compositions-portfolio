@@ -1,18 +1,17 @@
-# Sohn Compositions
-[Portfolio Site](https://www.sohn-compositions-portfolio.herokuapp.com)
-
-### Overview
-- [sohncompositions.com](https://www.sohn-compositions-portfolio.herokuapp.com) is a NodeJS web application hosted on [Heroku](https://www.heroku.com). It is running a simple email server using [SendGrid](https://sendgrid.com/). 
-
-- Customizing the content of the site means either uploading audio/image files to the [Assets Folder](https://github.com/sohncompositions/sohn-compositions-portfolio/tree/master/client/src/assets) or directly editting the [Configuration File](https://github.com/sohncompositions/sohn-compositions-portfolio/blob/master/client/src/app/config.json).
-
-- After making desired changes, the site must be redeployed via the [Heroku](https://www.heroku.com) dashboard.
----
 # Table of Contents
+- [Overview](#overview)
 - [Updating Guide](#updating-guide)
 - [Uploading Files](#uploading-files)
 - [Configuration File](#configuration-file)
 - [SendGrid](#sendgrid)
+
+---
+### Overview
+Customize the content of the site by either uploading audio/image files to the [Assets Folder](https://github.com/sohncompositions/sohn-compositions-portfolio/tree/master/client/src/assets) or directly editting the [Configuration File](https://github.com/sohncompositions/sohn-compositions-portfolio/blob/master/client/src/app/config.json).
+
+After making desired changes, the site must be redeployed via the [Heroku](https://www.heroku.com) dashboard.
+
+Changes with the company email address must be done via SendGrid, and then referenced in Heroku and GitHub.
 
 ---
 ### Updating Guide
