@@ -2,8 +2,17 @@
     "audioPlayer": {
         "categories": [
             "Action",
+            "Adventure",
+            "Classical",
+            "Drama",
             "Epic",
-            "Fantasy"
+            "Fantasy",
+            "Holiday",
+            "Luxury",  
+            "Magical",         
+            "Rock",
+            "Uplifting"                 
+                        
         ],
         "tracks": [
             {
@@ -11,27 +20,69 @@
                 "category": "Action",
                 "filename": "songo-drums-and-the-beast.mp3"
             },
-            {
+            {   
+                "title": "Enchanted Conquest",
+                "category": "Adventure",
+                "filename": "enchanted-quest.mp3"
+            },
+            {   
+                "title": "Mysterious Waltz",
+                "category": "Classical",
+                "filename": "mysterious-waltz.mp3"
+            },
+            {   
+                "title": "Snowflake Snow",
+                "category": "Christmas",
+                "filename": "snowflakesnow.mp3"
+            },
+            {   
+                "title": "Scenic Route",
+                "category": "Drama",
+                "filename": "scenic-route.mp3"
+            },
+            {   
                 "title": "The Octagon",
                 "category": "Epic",
-                "filename": "octagon-theme-v21-mp3.mp3"
-            },
-            {
-                "title": "Spooky Magical Fun",
+                "filename": "the-octagon.mp3"
+            },         
+            {   
+                "title": "Pumpkin Dance",
                 "category": "Fantasy",
+                "filename": "pumpkin-dance.mp3"
+            },          
+            {   
+                "title": "A Night In Paris",
+                "category": "Luxury",
+                "filename": "a-night-in-paris.mp3"
+            },        
+            {   
+                "title": "Spooky Magical Fun",
+                "category": "Magical",
                 "filename": "spooky-magical-fun.mp3"
             },
             {
-                "title": "Soaring",
-                "category": "Fantasy",
-                "filename": "soaring-mix.mp3"
-            }     
+                "title": "Basketball Hip Hop",
+                "category": "Quirky",
+                "filename": "basketball-hip-hop.mp3"
+            },
+          
+            {   
+                "title": "Cruising Offroad",
+                "category": "Rock",
+                "filename": "cruising-offroad.mp3"
+            },       
+            {   
+                "title": "Soaring High",
+                "category": "Uplifting",
+                "filename": "soaring-high.mp3"
+            }       
         ]
     },
     "header": {},
     "homePage": {
         "title": "",
-        "subtitle": "Sohn Compositions is a music production company founded by Joshua Sohn, writing original music for advertising, film, games, and songs.  Music is carefully crafted with colors, rhythms, and melody that is tailored to your needs."
+        "subtitle": "Writing original music for advertising, film, and games.  Composing stories through music.",
+                    "What kind of music are you looking for?"
     },
     "bioPage": {
         "title": "Joshua Sohn",
@@ -47,19 +98,19 @@
                 "name": "Michael Lee",
                 "company": "FastForward Productions",
                 "avatarFilename": "review-mike.png",
-                "quote": "I hired Josh to create original music for a 60 & 30 second broadcast regional spot.  Josh worked his magic and after I made a few tweak suggestions, he sent me a preliminary track.  Before we started, I warned Josh that my client had very specific music taste and there would probably be multiple revisions.  Surprisingly, the client was happy with the original piece Josh created and he never asked for any changes.  Josh was fast, attentive and made me look quite good."
+                "quote": "I hired Josh to create original music for a 60 & 30 second broadcast regional spot for the Air Force Reserve. Josh was fast, attentive and made me look quite good."
             },
             {
                 "name": "Moises Lemus",
                 "company": "Salty Block Productions",
                 "avatarFilename": "review-moises.jpg",
-                "quote": "Josh was incredibly easy to work with and really brought out the emotion of my project with his music. We were able to have a simple meeting explain the emotion and the vibe I wanted with the music and he went in the studio and created his magic. As a filmmaker having the right music is very important but having a better music composer who is professional and willing to go the extra mile is a real asset and priceless to your project."
+                "quote": "Josh is incredibly easy to work with and really brought out the emotion of my documentary with his music. He is professional and willing to go the extra mile."
             },
             {
                 "name": "Blake Tholen Clark",
                 "company": "Freelance",
                 "avatarFilename": "review-blake.jfif",
-                "quote": "Under lots of stress and little time Josh was easy to work with, took directions well, composed creative music and had a good positive attitude. Our film P.O.V. took home 4 awards including Best Effects that included music. I’ve worked for companies like American Idol, PBS, Comcast, Kroger, Vail Resorts and Utah State Government. Josh does good work and I recommend him."
+                "quote": "I’ve worked for companies like American Idol, PBS, Comcast, Kroger, Vail Resorts and Utah State Government. Josh does good work and I recommend him."
             }
         ]
     },
@@ -67,7 +118,8 @@
         "title": "Contact",
         "subtitle": "",
         "email": "sohncompositions@gmail.com",
-        "formCaption": "Interested in working together? Send an email to {email} or fill below",
+        "formCaption": "For custom music or licensing regarding your next project, I will get back to as soon as possible.", 
+                        "You can send an email to {email} or contact me below:"
         "emailServer": {
             "successMessage": "Your email has been sent!",
             "errorMessage": "Sorry! There was a problem sending the email."
