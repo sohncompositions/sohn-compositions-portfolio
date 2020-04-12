@@ -6,9 +6,9 @@
             <div #movieScrollWrapper id='movie-scroll-wrapper' class='overflow-hidden'>
                 <p #scrollingText [ngClass]="['scrolling-text', provideScrollClass()]"
                     [matTooltip]="audioService.currentTrack.title">
-                    <span class='italic'>{{audioService.currentTrack.category}}</span>
+                    <span>{{audioService.currentTrack.category}}</span>
                     <span class='primary padded'>|</span>
-                    <span>{{audioService.currentTrack.title}}</span>
+                    <span class='italic'>{{audioService.currentTrack.title}}</span>
                 </p>
             </div>
         </div>
