@@ -32,11 +32,6 @@
                 "filename": "mysterious-waltz.mp3"
             },
             {   
-                "title": "Snowflake Snow",
-                "category": "Christmas",
-                "filename": "snowflakesnow.mp3"
-            },
-            {   
                 "title": "Scenic Route",
                 "category": "Drama",
                 "filename": "scenic-route.mp3"
@@ -50,6 +45,11 @@
                 "title": "Pumpkin Dance",
                 "category": "Fantasy",
                 "filename": "pumpkin-dance.mp3"
+            },          
+            {   
+                "title": "Snowflake Snow",
+                "category": "Holiday",
+                "filename": "snowflakesnow.mp3"
             },          
             {   
                 "title": "A Night In Paris",
