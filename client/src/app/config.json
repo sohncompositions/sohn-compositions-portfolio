@@ -81,8 +81,9 @@
     "header": {},
     "homePage": {
         "title": "",
-        "subtitle": "Writing original music for advertising, film, and games.  Composing stories through music.",
+        "subtitle": ["Elevating Film and Games Through Music",
                     "What kind of music are you looking for?"
+                    ]
     },
     "bioPage": {
         "title": "Joshua Sohn",
@@ -118,8 +119,9 @@
         "title": "Contact",
         "subtitle": "",
         "email": "sohncompositions@gmail.com",
-        "formCaption": "For custom music or licensing regarding your next project, I will get back to as soon as possible.", 
+        "formCaption": ["For custom music or licensing regarding your next project, I will get back to as soon as possible.", 
                         "You can send an email to {email} or contact me below:"
+                       ],
         "emailServer": {
             "successMessage": "Your email has been sent!",
             "errorMessage": "Sorry! There was a problem sending the email."
