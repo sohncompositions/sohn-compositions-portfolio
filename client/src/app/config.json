@@ -119,7 +119,7 @@
         "title": "Contact",
         "subtitle": "",
         "email": "sohncompositions@gmail.com",
-        "formCaption": "For interest in commissioning or licensing music regarding your next project, send an email to {email} or fill form below. You will be contacted shortly.",   
+        "formCaption": "For a commission or license on music regarding your next project, contact us at {email} or fill form below. You will be contacted shortly.",   
         "emailServer": {
             "successMessage": "Your email has been sent!",
             "errorMessage": "Sorry! There was a problem sending the email."
