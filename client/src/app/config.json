@@ -80,10 +80,9 @@
     },
     "header": {},
     "homePage": {
-        "title": "",
-        "subtitle": ["Elevating Film and Games Through Music",
-                    "What kind of music are you looking for?"
-                    ]
+        "title": "Elevating Film and Games Through Music.",
+        "subtitle": "What kind of music would you like to hear from us? Click below:"
+                    
     },
     "bioPage": {
         "title": "Joshua Sohn",
@@ -119,9 +118,8 @@
         "title": "Contact",
         "subtitle": "",
         "email": "sohncompositions@gmail.com",
-        "formCaption": ["For custom music or licensing regarding your next project, I will get back to as soon as possible.", 
-                        "You can send an email to {email} or contact me below:"
-                       ],
+        "formCaption": "For custom music or licensing regarding your next project, I will get back to as soon as possible. You can send an email to {email} or contact me below:"
+                       
         "emailServer": {
             "successMessage": "Your email has been sent!",
             "errorMessage": "Sorry! There was a problem sending the email."
