@@ -1,5 +1,6 @@
 import { Component, AfterViewChecked, ViewChild, ElementRef, OnChanges } from '@angular/core';
 import { AudioService } from '../services/audio.service';
+import { ConfigService } from '../services/config.service';
 
 @Component({
     selector: 'app-footer',
@@ -8,12 +9,18 @@ import { AudioService } from '../services/audio.service';
 })
 export class FooterComponent implements AfterViewChecked {
 
+    pageConfig: IConfig['footer'];
     scrolling: boolean;
 
     @ViewChild('movieScrollWrapper') movieScrollWrapper: ElementRef<HTMLDivElement>;
     @ViewChild('scrollingText') scrollingText: ElementRef<HTMLParagraphElement>;
 
-    constructor(public audioService: AudioService) { }
+    constructor(
+        public audioService: AudioService,
+        private configService: ConfigService
+    ) {
+        this.pageConfig = this.configService.config.footer;
+    }
 
     ngAfterViewChecked() {
         this.applyMovieScroll();

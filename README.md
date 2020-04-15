@@ -80,6 +80,10 @@ The [Configuration File](https://github.com/sohncompositions/sohn-compositions-p
     "header": {
         // No configuration available
     },
+    "footer": {
+        // Displays at the bottom on page load while no song is selected
+        "welcomeMessage": "Welcome to my site!"
+    },
     "homePage": {
         // You can remove text by leaving it blank:
         "title": "",

@@ -12,9 +12,9 @@
                 </p>
             </div>
         </div>
-        <div *ngIf='!audioService.currentTrack' id='footer-welcome' class='mat-body-2 padded'>
+        <div *ngIf='!audioService.currentTrack' id='footer-welcome' class='mat-body-2 padded overflow-auto'>
             <mat-icon color='primary' fontSet="fa" fontIcon="fa-music"></mat-icon>
-            <p id='footer-welcome-message'>Welcome Message</p>
+            <p id='footer-welcome-message' class='padded'>{{pageConfig.welcomeMessage}}</p>
         </div>
         <div class='spacer'></div>
         <app-social-media class='auto-fill pull-right'></app-social-media>

@@ -25,7 +25,9 @@ declare interface IReferral {
     quote: string;
 }
 declare interface IHeader { }
-declare interface IFooter { }
+declare interface IFooter {
+    welcomeMessage: string;
+}
 declare interface IHomePage extends IPageConfig { }
 
 declare interface IBioPage extends IPageConfig {
