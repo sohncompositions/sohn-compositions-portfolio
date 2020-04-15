@@ -15,5 +15,5 @@
         </mat-icon>
     </button>
     <audio #audioPlayer id='audio-player' (play)='handlePlay()' (pause)='handlePause()' [src]="getAudioSource()"
-        controls controlslist='nodownload' autoplay></audio>
+        controls controlslist='nodownload' (ended)='handleNext()' autoplay></audio>
 </div>

@@ -8,12 +8,11 @@
             "Epic",
             "Fantasy",
             "Holiday",
-            "Luxury",  
+            "Luxury",
             "Magical",
             "Quirky",
             "Rock",
-            "Uplifting"                 
-                        
+            "Uplifting"
         ],
         "tracks": [
             {
@@ -21,42 +20,42 @@
                 "category": "Action",
                 "filename": "songo-drums-and-the-beast.mp3"
             },
-            {   
+            {
                 "title": "Enchanted Conquest",
                 "category": "Adventure",
                 "filename": "enchanted-quest.mp3"
             },
-            {   
+            {
                 "title": "Mysterious Waltz",
                 "category": "Classical",
                 "filename": "mysterious-waltz.mp3"
             },
-            {   
+            {
                 "title": "Scenic Route",
                 "category": "Drama",
                 "filename": "scenic-route.mp3"
             },
-            {   
+            {
                 "title": "The Octagon",
                 "category": "Epic",
                 "filename": "the-octagon.mp3"
-            },         
-            {   
+            },
+            {
                 "title": "Pumpkin Dance",
                 "category": "Fantasy",
                 "filename": "pumpkin-dance.mp3"
-            },          
-            {   
+            },
+            {
                 "title": "Snowflake Snow",
                 "category": "Holiday",
                 "filename": "snowflake-snow.mp3"
-            },          
-            {   
+            },
+            {
                 "title": "A Night In Paris",
                 "category": "Luxury",
                 "filename": "a-night-in-paris.mp3"
-            },        
-            {   
+            },
+            {
                 "title": "Spooky Magical Fun",
                 "category": "Magical",
                 "filename": "spooky-magical-fun.mp3"
@@ -66,24 +65,25 @@
                 "category": "Quirky",
                 "filename": "basketball-hip-hop.mp3"
             },
-          
-            {   
+            {
                 "title": "Cruising Offroad",
                 "category": "Rock",
                 "filename": "cruising-offroad.mp3"
-            },       
-            {   
+            },
+            {
                 "title": "Soaring High",
                 "category": "Uplifting",
                 "filename": "soaring-high.mp3"
-            }       
+            }
         ]
     },
     "header": {},
+    "footer": {
+        "welcomeMessage": "Welcome!"
+    },
     "homePage": {
-        "title": "",
+        "title": "Elevating Film and Games Through Music 🎧",
         "subtitle": "What kind of music would you like to hear?"
-                    
     },
     "bioPage": {
         "title": "Joshua Sohn",
@@ -119,7 +119,7 @@
         "title": "Contact",
         "subtitle": "",
         "email": "sohncompositions@gmail.com",
-        "formCaption": "For a commission or license on music regarding your next project, contact us at {email} or fill form below. You will be contacted shortly.",   
+        "formCaption": "For a commission or license on music regarding your next project, contact us at {email} or fill form below. You will be contacted shortly.",
         "emailServer": {
             "successMessage": "Your email has been sent!",
             "errorMessage": "Sorry! There was a problem sending the email."

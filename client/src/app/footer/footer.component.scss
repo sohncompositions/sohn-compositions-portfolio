@@ -9,6 +9,14 @@ mat-toolbar-row {
 app-audio-player {
   width: 100%;
 }
+#footer-welcome {
+  display: flex;
+  align-items: center;
+}
+
+#footer-welcome-message {
+  text-align: center;
+}
 
 #now-playing {
   width: 75%;

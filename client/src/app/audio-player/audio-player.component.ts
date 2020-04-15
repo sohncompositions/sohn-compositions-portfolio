@@ -8,7 +8,6 @@ import { AudioService } from '../services/audio.service';
 })
 
 export class AudioPlayerComponent {
-    playing = false;
 
     @ViewChild('audioPlayer') audioPlayer: ElementRef<HTMLAudioElement>;
 
