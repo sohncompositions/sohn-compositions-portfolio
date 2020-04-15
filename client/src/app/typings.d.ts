@@ -25,6 +25,7 @@ declare interface IReferral {
     quote: string;
 }
 declare interface IHeader { }
+declare interface IFooter { }
 declare interface IHomePage extends IPageConfig { }
 
 declare interface IBioPage extends IPageConfig {
@@ -64,6 +65,7 @@ declare interface ISocialMediaLink {
 declare interface IConfig {
     audioPlayer: IAudioPlayer;
     header: IHeader;
+    footer: IFooter;
     homePage: IHomePage;
     bioPage: IBioPage;
     contactPage: IContactPage;

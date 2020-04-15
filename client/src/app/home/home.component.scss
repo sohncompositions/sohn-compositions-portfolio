@@ -1,7 +1,14 @@
 @import "../../styles/responsive.scss";
+@import "../../styles//responsive.scss";
+
+h1,
+h3 {
+  text-align: center;
+}
 
 button {
-  padding: 0 2rem 0 2rem;
+  padding: 0 1rem 0 1rem;
+  width: 33%;
 }
 
 #logo {
@@ -19,4 +26,16 @@ button {
 section {
   max-width: $breakpoint-md;
   margin: auto;
+}
+
+@media (min-width: $breakpoint-sm) {
+  button {
+    width: 25%;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  button {
+    width: 15%;
+  }
 }

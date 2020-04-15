@@ -12,6 +12,10 @@
                 </p>
             </div>
         </div>
+        <div *ngIf='!audioService.currentTrack' id='footer-welcome' class='mat-body-2 padded'>
+            <mat-icon color='primary' fontSet="fa" fontIcon="fa-music"></mat-icon>
+            <p id='footer-welcome-message'>Welcome Message</p>
+        </div>
         <div class='spacer'></div>
         <app-social-media class='auto-fill pull-right'></app-social-media>
     </mat-toolbar-row>
