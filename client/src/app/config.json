@@ -1,71 +1,117 @@
 {
     "audioPlayer": {
         "categories": [
+            "Action",
+            "Adventure",
+            "Classical",
+            "Drama",
             "Epic",
-            "Energetic",
-            "Adventure"
+            "Fantasy",
+            "Holiday",
+            "Luxury",  
+            "Magical",
+            "Quirky",
+            "Rock",
+            "Uplifting"                 
+                        
         ],
         "tracks": [
             {
-                "title": "Spooky Magical Fun",
+                "title": "Songo Drums & The Beast",
+                "category": "Action",
+                "filename": "songo-drums-and-the-beast.mp3"
+            },
+            {   
+                "title": "Enchanted Conquest",
                 "category": "Adventure",
+                "filename": "enchanted-quest.mp3"
+            },
+            {   
+                "title": "Mysterious Waltz",
+                "category": "Classical",
+                "filename": "mysterious-waltz.mp3"
+            },
+            {   
+                "title": "Scenic Route",
+                "category": "Drama",
+                "filename": "scenic-route.mp3"
+            },
+            {   
+                "title": "The Octagon",
+                "category": "Epic",
+                "filename": "the-octagon.mp3"
+            },         
+            {   
+                "title": "Pumpkin Dance",
+                "category": "Fantasy",
+                "filename": "pumpkin-dance.mp3"
+            },          
+            {   
+                "title": "Snowflake Snow",
+                "category": "Holiday",
+                "filename": "snowflake-snow.mp3"
+            },          
+            {   
+                "title": "A Night In Paris",
+                "category": "Luxury",
+                "filename": "a-night-in-paris.mp3"
+            },        
+            {   
+                "title": "Spooky Magical Fun",
+                "category": "Magical",
                 "filename": "spooky-magical-fun.mp3"
             },
             {
-                "title": "Songo Drums & The Beast",
-                "category": "Energetic",
-                "filename": "songo-drums-and-the-beast.mp3"
+                "title": "Basketball Hip Hop",
+                "category": "Quirky",
+                "filename": "basketball-hip-hop.mp3"
             },
-            {
-                "title": "Soaring",
-                "category": "Adventure",
-                "filename": "soaring-mix.mp3"
-            },
-            {
-                "title": "The Octagon",
-                "category": "Epic",
-                "filename": "octagon-theme-v21-mp3.mp3"
-            }
+          
+            {   
+                "title": "Cruising Offroad",
+                "category": "Rock",
+                "filename": "cruising-offroad.mp3"
+            },       
+            {   
+                "title": "Soaring High",
+                "category": "Uplifting",
+                "filename": "soaring-high.mp3"
+            }       
         ]
     },
     "header": {},
     "homePage": {
         "title": "",
-        "subtitle": "Sohn Compositions is a music production company founded by Joshua Sohn, writing original music for advertising, film, games, and songs.  Music is carefully crafted with colors, rhythms, and melody that is tailored to your needs."
+        "subtitle": "What kind of music would you like to hear?"
+                    
     },
     "bioPage": {
         "title": "Joshua Sohn",
         "subtitle": "Film Composer / Songwriter",
         "bio": [
             "Hi! I team up with great artists, film makers, game developers and businesses to write music that help elevate, engage, and inspire their message.",
-            "My name is Joshua Sohn. Much of my early musical background was surrounded by the tune of church hymns and classical music.  The turning point of my musical journey came when my mother passed away at age 14. During this tough time, I used music to cope with my feelings and process her loss.  It became a source of healing and later on inspired me to do the same for others in my own music.",
-            "Fast forward to present day, equipped with a music degree from the University of Utah and a unique musical skill set, I found my calling as a composer.  Since 2014, I have premiered original music for the many film festivals including the Slamdance, Big Sky Documentary, Audience Awards, & Filmquest.  You will hear my music on various mediums from Youtube videos (Middara, board game) to TV commercials (U.S. Air Force Reserve, public service announcements).  I also contribute music to libraries such as Velvet Green Music (based in Santa Monica, California). "
+            "My name is Joshua Sohn. Much of my childhood was surrounded by the tune of church hymns, classical symphonies and rock music.  The turning point of my musical journey came when my mother passed away at age 14. While coping her loss, I used music to help express what I was feeling. The power of music became a source of healing and now would like to pass that on to others with my own writing.",
+            "Now almost 20 years later, I've developed a career in music, working with TV (Dwight in Shining armor, Air Force Reserve), feature films (Resilience and the Lost Gems, The Adventure of A.R.I.: My Robot Friend) and various production music companies including Velvet Green Music, AMADEA, and Gothic Storm."
         ],
         "referralTitle": "Reviews",
         "referrals": [
             {
-                "name": "Test",
-                "company": "Test, Inc.",
-                "avatarFilename": "referral1.png",
-                "quote": "lorem ipsum lorem ipsum lorem ipsum ergaerg aerg aerg aerg aerg aerg aerg aerg aerg aerg."
+                "name": "Michael Lee",
+                "company": "FastForward Productions",
+                "avatarFilename": "review-mike.png",
+                "quote": "I hired Josh to create original music for a 60 & 30 second broadcast regional spot for the Air Force Reserve. Josh was fast, attentive and made me look quite good."
             },
             {
-                "name": "Test1",
-                "company": "Test1, Inc.",
-                "avatarFilename": "referral1.png",
-                "quote": "lorem ipsum lorem ipsum lorem ipsum ergaerg aerg aerg aerg aerg aerg aerg aerg aerg aerg."
+                "name": "Moises Lemus",
+                "company": "Salty Block Productions",
+                "avatarFilename": "review-moises.jpg",
+                "quote": "Josh is incredibly easy to work with and really brought out the emotion of my documentary with his music. He is professional and willing to go the extra mile."
             },
             {
-                "name": "Test2",
-                "company": "Test2, Inc.",
-                "avatarFilename": "referral1.png",
-                "quote": "lorem ipsum lorem ipsum lorem ipsum ergaerg aerg aerg aerg aerg aerg aerg aerg aerg aerg."
-            },
-            {
-                "name": "Test3",
-                "company": "Test3, Inc.",
-                "avatarFilename": "referral1.png",
-                "quote": "lorem ipsum lorem ipsum lorem ipsum ergaerg aerg aerg aerg aerg aerg aerg aerg aerg aerg."
+                "name": "Blake Tholen Clark",
+                "company": "Freelance",
+                "avatarFilename": "review-blake.jfif",
+                "quote": "I’ve worked for companies like American Idol, PBS, Comcast, Kroger, Vail Resorts and Utah State Government. Josh does good work and I recommend him."
             }
         ]
     },
@@ -73,7 +119,7 @@
         "title": "Contact",
         "subtitle": "",
         "email": "sohncompositions@gmail.com",
-        "formCaption": "Interested in working together? Send an email to {email} or fill below",
+        "formCaption": "For a commission or license on music regarding your next project, contact us at {email} or fill form below. You will be contacted shortly.",   
         "emailServer": {
             "successMessage": "Your email has been sent!",
             "errorMessage": "Sorry! There was a problem sending the email."
