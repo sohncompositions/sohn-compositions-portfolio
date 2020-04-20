@@ -1,30 +1,51 @@
 {
   "name": "sohn-compositions-portfolio",
-  "version": "1.0.0",
-  "description": "Portfolio website for Joshua Sohn",
-  "main": "index.js",
+  "version": "0.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon",
-    "start": "node .",
-    "heroku-postbuild": "cd ./client && npm install"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
   },
-  "author": "Ben Turner",
-  "license": "ISC",
+  "private": true,
   "dependencies": {
-    "@sendgrid/mail": "^6.5.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "@angular/animations": "~9.0.2",
+    "@angular/cdk": "^9.1.0",
+    "@angular/common": "~9.0.2",
+    "@angular/compiler": "~9.0.2",
+    "@angular/core": "~9.0.2",
+    "@angular/forms": "~9.0.2",
+    "@angular/material": "^9.1.0",
+    "@angular/platform-browser": "~9.0.2",
+    "@angular/platform-browser-dynamic": "~9.0.2",
+    "@angular/router": "~9.0.2",
+    "typescript": "~3.7.5",
+    "rxjs": "~6.5.4",
+    "tslib": "^1.10.0",
+    "zone.js": "~0.10.2",
+    "@fortawesome/fontawesome-free": "^5.12.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
-  },
-  "engines": {
-    "node": "10.16.0"
-  },
-  "nodemonConfig": {
-    "ignore": [
-      "client/*"
-    ]
+    "@angular-devkit/build-angular": "~0.900.3",
+    "@angular/cli": "~9.0.3",
+    "@angular/compiler-cli": "~9.0.2",
+    "@angular/language-service": "~9.0.2",
+    "@types/jasmine": "~3.5.0",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
+    "codelyzer": "^5.1.2",
+    "jasmine-core": "~3.5.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~4.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~2.1.0",
+    "karma-jasmine": "~2.0.1",
+    "karma-jasmine-html-reporter": "^1.4.2",
+    "protractor": "~5.4.3",
+    "ts-node": "~8.3.0",
+    "tslint": "~5.18.0",
+    "typescript": "~3.7.5"
   }
 }
