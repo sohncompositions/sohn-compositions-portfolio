@@ -1,0 +1,14 @@
+version: "3"
+services:
+  dev:
+    image: node:lts
+    volumes:
+      - nodemodules:/usr/src/sohn-compositions-portfolio/node_modules/
+      - .:/usr/src/sohn-compositions-portfolio/
+    working_dir: /usr/src/sohn-compositions-portfolio
+    command: npm run dev
+    ports:
+      - 4200:4200
+volumes:
+  nodemodules:
+    external: true

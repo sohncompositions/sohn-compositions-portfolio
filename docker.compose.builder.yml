@@ -1,0 +1,19 @@
+version: "2"
+services:
+  base:
+    image: node
+    volumes:
+      - nodemodules:/usr/src/sohn-compositions-portfolio/node_modules
+      - .:/usr/src/sohn-compositions-portfolio
+    working_dir: /usr/src/sohn-compositions-portfolio
+  install:
+    extends:
+      service: base
+    command: npm i
+  build:
+    extends:
+      service: base
+    command: npm run build
+volumes:
+  nodemodules:
+    external: true
