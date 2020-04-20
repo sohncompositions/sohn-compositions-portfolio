@@ -130,6 +130,8 @@ The [Configuration File](https://github.com/sohncompositions/sohn-compositions-p
         // You can make a link from the email by using {email} anywhere in the caption message:
         "formCaption": "Send an email to {email} or fill below",
         "emailServer": {
+            // API endpoint for sending emails
+            "url": "https://<your-node-emailer-domain>.com/api/emailer"
             // Status messages which display after email has been sent:
             "successMessage": "Your email has been sent!",
             "errorMessage": "Sorry! There was a problem sending the email."
