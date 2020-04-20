@@ -1,4 +1,4 @@
 #!/bin/bash
 
-git clone https://github.com/sohncompositions/sohn-compositions-portfolio.git .
-npm start
+cp -r /usr/src/cache/node_modules/. /usr/src/sohn-compositions-portfolio/node_modules/
+exec npm start
