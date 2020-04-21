@@ -6,7 +6,7 @@ services:
       - nodemodules:/usr/src/sohn-compositions-portfolio/node_modules/
       - .:/usr/src/sohn-compositions-portfolio/
     working_dir: /usr/src/sohn-compositions-portfolio
-    command: npm run dev
+    command: npm start -- --host 0.0.0.0
     ports:
       - 4200:4200
 volumes:

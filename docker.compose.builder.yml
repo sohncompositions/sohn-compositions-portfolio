@@ -13,7 +13,7 @@ services:
   build:
     extends:
       service: base
-    command: npm run build
+    command: npm run build -- --prod
 volumes:
   nodemodules:
     external: true
