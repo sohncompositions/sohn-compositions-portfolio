@@ -1,5 +1,3 @@
-**!!UNDER CONSTRUCTION!!**
-
 # Table of Contents
 - [Overview](#overview)
 - [Updating Guide](#updating-guide)
@@ -9,16 +7,29 @@
 
 ---
 ### Overview
-Customize the content of the site by either uploading audio/image files to the [Assets Folder](https://github.com/sohncompositions/sohn-compositions-portfolio/tree/master/client/src/assets) or directly editting the [Configuration File](https://github.com/sohncompositions/sohn-compositions-portfolio/blob/master/client/src/app/config.json).
 
-After making desired changes, the site must be redeployed via the [Heroku](https://www.heroku.com) dashboard.
+Site content is rendered based on the contents of two things:
+- [Configuration File](https://github.com/sohncompositions/sohn-compositions-portfolio/blob/master/client/src/app/config.json)
+- [Assets Folder](https://github.com/sohncompositions/sohn-compositions-portfolio/tree/master/client/src/assets)
 
-Changes with the company email address must be done via SendGrid, and then referenced in Heroku and GitHub.
+There is also a separate [Email Server](https://github.com/sohncompositions/sohn-compositions-emailer) hosted by [Heroku](https://www.heroku.com) which the application communicates with. 
+
+##### Applications Required
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)
+- [Git](https://git-scm.com/downloads)
+- [VS Code](https://code.visualstudio.com/)
 
 ---
 ### Updating Guide
-- Always make sure that you are on the `dev` branch before making changes. This ensures that if you make any typos or change your mind, the `master` branch remains in its previous, stable state.
-- Start making edits/uploading files as desired. There are only two places where you will likely be making changes:
+
+##### Initial Setup (You probably only need to do these once)
+- Clone the [Repository](https://github.com/sohncompositions/sohn-compositions-portfolio) onto your machine
+- Open project in VS Code and run the task `Setup Sohn Compositions Portfolio`. This installs the necessary tools to run the application from within a Docker container
+
+##### Testing Changes
+- Run the task `Run Sohn Compositions Portfolio`. This starts the development server which serves the app locally on your machine.
+- Visit [Localhost](http://localhost:4200) in a browser. This make take a few moments to load. Check the docker dashboard to view the development build status.
+- Start making changes:
     - [Assets Folder](https://github.com/sohncompositions/sohn-compositions-portfolio/tree/master/client/src/assets)
         - Contains image and audio files.
         - See [below](#Uploading-Files) for more details.
@@ -27,10 +38,11 @@ Changes with the company email address must be done via SendGrid, and then refer
         - Contains settings for site content.
         - See [below](#Configuration-File) for more details.
 
-- Once you're happy with your changes you will need to commit them. At the bottom of the file you are editing simply write a short, specific message that tells your future self what changes you've made. You will need to do this for each file you are editing/uploading.
-- When you are done making changes it may be wise to test them out before officially deploying to the `master` branch. To do this, go to your [Heroku](https://www.heroku.com) dashboard and click on the 'Deploy' tab. At the bottom under 'Manual Deploys' select 'Dev' from the options. Then click 'Deploy'. This will build/compile your changes and serve up your site from the `dev` branch, which contains the pending changes you've made.
-- Once you are happy with the result you will need to make it 'official'. From the [GitHub repository](https://github.com/sohncompositions/sohn-compositions-portfolio) create a pull request and make sure the base branch is `master` and the compare branch is `dev`. Follow the steps to complete the merge. Now you can deploy the site following the previous step, only this time select the `master` branch.
-- That's it!
+- Once you're happy with your changes you will need to commit them. Use VS code Source Control extension to make a commit with a specific message stating what changes were made. Using the master branch is fine.
+
+##### Deploying
+- Run the task `Build Sohn Compositions Portfolio`. This compiles the source code into a production ready format. You should see a new folder created called `dist`, which contains another folder called `sohn-compositions-portfolio`. Upload `sohn-compositions-portfolio` and all its contents to whatever hosting service you are using. *Don't upload `dist` itself!*
+
 ---
 
 ### Uploading Files
