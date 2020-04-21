@@ -48,6 +48,7 @@ declare interface IFields {
 }
 
 declare interface IEmailServer {
+    url: string;
     successMessage: string;
     errorMessage: string;
 }

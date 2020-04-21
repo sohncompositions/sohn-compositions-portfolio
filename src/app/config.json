@@ -121,6 +121,7 @@
         "email": "sohncompositions@gmail.com",
         "formCaption": "For a commission or license on music regarding your next project, contact us at {email} or fill form below. You will be contacted shortly.",
         "emailServer": {
+            "url": "https://sohn-compositions-emailer.herokuapp.com/api/emailer",
             "successMessage": "Your email has been sent!",
             "errorMessage": "Sorry! There was a problem sending the email."
         },
