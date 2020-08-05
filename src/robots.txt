@@ -1,0 +1,5 @@
+User-agent: *
+Allow: https://sohncompositions.com/#/about
+Allow: https://sohncompositions.com/#/contact
+Allow: https://sohncompositions.com/#/services
+Disallow: https://sohncompositions.com/sitemap.xml
