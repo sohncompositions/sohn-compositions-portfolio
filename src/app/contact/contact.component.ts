@@ -26,11 +26,11 @@ export class ContactComponent {
         this.interpolatedFormCaption = this.interpolateFormCaption();
     }
 
-    interpolateFormCaption() {
+    interpolateFormCaption(): string[] {
         return this.pageConfig.formCaption.split('{email}');
     }
 
-    displayError(formControlName: string) {
+    displayError(formControlName: string): string {
         const formControl = this.contactForm.controls[formControlName];
         if (formControl.hasError('required')) { return 'This field is required.'; }
         if (formControl.hasError('email')) { return 'This field is not a valid email format'; }
@@ -41,7 +41,7 @@ export class ContactComponent {
         this.submitting = false;
     }
 
-    handleSubmit(e) {
+    handleSubmit(e: Event): void {
         e.preventDefault();
         this.submitting = true;
         this.contactService.submitContactForm(this.contactForm.value)
@@ -54,5 +54,13 @@ export class ContactComponent {
                 this.success = null;
                 this.onSubmissionComplete();
             });
+    }
+
+    get showTitle(): boolean {
+        return !!this.pageConfig.title;
+    }
+
+    get showSubtitle(): boolean {
+        return !!this.pageConfig.subtitle;
     }
 }

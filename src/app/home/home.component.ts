@@ -20,13 +20,15 @@ export class HomeComponent {
         this.pageConfig = this.configService.config.homePage;
     }
 
-    determineColor(i: number) {
+    determineColor(i: number): string {
         return i === this.selectedCategoryIndex ? 'accent' : 'primary';
     }
-    onClick(i: number, category: string) {
+
+    onClick(i: number, category: string): void {
         this.selectedCategoryIndex = i;
         this.selectRandomTrackByCategory(category);
     }
+
     selectRandomTrackByCategory(category: string): void {
         const randomize = (x) => Math.floor(Math.random() * x);
 
@@ -48,5 +50,13 @@ export class HomeComponent {
         }
 
         this.audioService.changeTrack(filteredByCategory[randomIndex]);
+    }
+
+    get showTitle(): boolean {
+        return !!this.pageConfig.title;
+    }
+
+    get showSubtitle(): boolean {
+        return !!this.pageConfig.subtitle;
     }
 }

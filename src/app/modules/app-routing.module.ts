@@ -27,7 +27,8 @@ const routes: Routes = [
   declarations: [
     HomeComponent,
     BioComponent,
-    ContactComponent
+    ContactComponent,
+    MusicServicesComponent
   ]
 })
 export class AppRoutingModule { }

@@ -1,5 +1,6 @@
-declare interface ILogo extends IAsset { }
-declare interface IIcon extends IAsset { }
+/* eslint-disable @typescript-eslint/no-empty-interface */
+type ILogo = IAsset
+type IIcon = IAsset
 declare interface IAsset {
     filename: string;
 }
@@ -28,7 +29,7 @@ declare interface IHeader { }
 declare interface IFooter {
     welcomeMessage: string;
 }
-declare interface IHomePage extends IPageConfig { }
+type IHomePage = IPageConfig;
 
 declare interface IBioPage extends IPageConfig {
     bio: string[];
@@ -60,6 +61,27 @@ declare interface IContactPage extends IPageConfig {
     formCaption: string;
 }
 
+declare interface IMusicService {
+    title: string;
+    content: string;
+    imgFilename: string;
+    option: string;
+    actionText: string;
+}
+
+declare interface ISellingPoints {
+    title: string;
+    content: string;
+}
+
+declare interface IMusicServicesPage extends IPageConfig {
+    services: IMusicService[];
+    sellingPointSection: {
+        title: string;
+        sellingPoints: ISellingPoints[];
+    }
+}
+
 declare interface ISocialMediaLink {
     url: string;
     iconLabel: string;
@@ -72,5 +94,6 @@ declare interface IConfig {
     homePage: IHomePage;
     bioPage: IBioPage;
     contactPage: IContactPage;
+    musicServicesPage: IMusicServicesPage;
     socialMediaLinks: ISocialMediaLink[];
 }

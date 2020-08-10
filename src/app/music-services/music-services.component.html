@@ -1,3 +1,21 @@
-<section class='full-height column center-h fade-in'>
-   Music Services
+<section id="music-services-page" class='full-height column fade-in'>
+   <h1 *ngIf="showTitle" class="mat-display-1">{{pageConfig.title}}</h1>
+   <h1 *ngIf="showSubtitle" class="mat-subheading-1">{{pageConfig.subtitle}}</h1>
+   <section id="services-list" class="column">
+      <mat-card *ngFor="let service of pageConfig.services">
+         <div class="service column align-center">
+            <div class="service-img" [style.background-image]="generateImageUrl(service.imgFilename)"></div>
+            <div class="service-content">
+               <h3 class="mat-display-1 service-title">{{service.title}}</h3>
+               <p class="service-summary">{{service.content}}</p>
+            </div>
+            <div class="service-actions">
+               <button color="primary" mat-stroked-button>{{service.actionText}}</button>
+            </div>
+         </div>
+      </mat-card>
+   </section>
+   <section id="selling-points">
+
+   </section>
 </section>
