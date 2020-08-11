@@ -1,5 +1,6 @@
 @import "../../styles/responsive.scss";
 @import "../../styles/variables.scss";
+@import "../../styles/theme.scss";
 
 mat-card {
   margin: 0.5rem 0 0.5rem;
@@ -11,7 +12,7 @@ mat-card {
 }
 
 .service-img {
-  height: 9rem;
+  height: 10rem;
   width: 15rem;
   margin: auto;
   background-position: center;
@@ -22,6 +23,21 @@ mat-card {
 .service-title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+#selling-points-section {
+  padding-top: 3rem;
+  margin-top: 2rem;
+  background-color: mat-color($app-primary, A100);
+  color: mat-color($app-primary, "50-contrast");
+}
+
+.index {
+  margin-bottom: 1rem;
+  border: 0.1rem solid;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
 }
 
 @media (min-width: $breakpoint-sm) {
@@ -40,6 +56,16 @@ mat-card {
   }
   .service-actions {
     flex: 1;
+  }
+  .selling-point {
+    width: 75%;
+    margin: auto;
+    flex-direction: row;
+    align-items: center;
+  }
+  .selling-point-content,
+  .selling-point-title {
+    text-align: left;
   }
 }
 

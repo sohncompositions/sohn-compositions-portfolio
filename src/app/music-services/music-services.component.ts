@@ -22,6 +22,10 @@ export class MusicServicesComponent extends FileUtil {
         return `url(${this.resolveFilename(filename)})`;
     }
 
+    get showSellingPointsTitle(): boolean {
+        return !!this.pageConfig.sellingPointSection.title;
+    }
+
     get showTitle(): boolean {
         return !!this.pageConfig.title;
     }
