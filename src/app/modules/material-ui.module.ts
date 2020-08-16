@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatSelectModule } from '@angular/material/select';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MatDividerModule } from '@angular/material/divider';
         MatInputModule,
         MatProgressSpinnerModule,
         MatCardModule,
-        MatDividerModule
+        MatDividerModule,
+        MatSelectModule
     ],
 })
 

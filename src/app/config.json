@@ -86,28 +86,28 @@
         "subtitle": "Which samples would you like to hear?"
     },
     "musicServicesPage": {
-        "title": "",
+        "title": "Services",
         "subtitle": "",
         "services": [
             {
                 "title": "Film Score",
                 "content": "Carefully chosen colors and textures to enhance the story on screen. Whatever the genre that you want to bring to life, I'll write memorable themes and compelling underscore to captivate your audience.",
                 "imgFilename": "film-score-service.png",
-                "option": "film-score",
+                "option": "Film Score",
                 "actionText": "Get a Quote!"
             },
             {
                 "title": "Game Soundtrack",
                 "content": "Engaging music that will immerse your player in the world that you're developing. From chiptune style to modern, there is a catchy tune waiting to be written.",
                 "imgFilename": "game-soundtrack-service.png",
-                "option": "game-soundtrack",
+                "option": "Game Soundtrack",
                 "actionText": "Get a Quote!"
             },
             {
                 "title": "Song Arrangement",
                 "content": "Pairing music to your lyrics to create a powerful song. A collaborative process that will enhance the message of your lyrics. Pitch me your idea and I'll do the rest.",
                 "imgFilename": "song-arrangement-service.png",
-                "option": "song-arrangement",
+                "option": "Song Arrangement",
                 "actionText": "Get a Quote!"
             }
         ],
@@ -169,23 +169,29 @@
             "successMessage": "Your email has been sent!",
             "errorMessage": "Sorry! There was a problem sending the email."
         },
+        "selections": [
+            "Other",
+            "Film Score",
+            "Game Soundtrack",
+            "Song Arrangement"
+        ],
         "fields": {
             "name": {
-                "type": "text",
-                "required": true
+                "required": true,
+                "label": "Your Name"
             },
             "sender": {
-                "type": "text",
                 "required": true,
-                "email": true
+                "email": true,
+                "label": "Your Email"
             },
             "subject": {
-                "type": "text",
-                "required": true
+                "required": true,
+                "label": "Select A Service"
             },
             "message": {
-                "type": "text",
-                "required": true
+                "required": true,
+                "label": "Your Message"
             }
         }
     },

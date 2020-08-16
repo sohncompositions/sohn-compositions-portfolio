@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ConfigService } from '../services/config.service';
-import { FileUtil } from '../util-classes';
 
 
 @Component({
@@ -8,13 +7,15 @@ import { FileUtil } from '../util-classes';
     templateUrl: './bio.component.html',
     styleUrls: ['./bio.component.scss']
 })
-export class BioComponent extends FileUtil {
+export class BioComponent {
     pageConfig: IConfig['bioPage'];
     constructor(
         private configService: ConfigService
     ) {
-        super();
         this.pageConfig = this.configService.config.bioPage;
     }
 
+    resolveFilename(filename: string): string {
+        return `../../assets/images/${filename}`;
+    }
 }

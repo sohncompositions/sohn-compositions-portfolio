@@ -37,11 +37,10 @@ declare interface IBioPage extends IPageConfig {
     referralTitle: string;
 }
 
-declare type FieldTypes = 'text' | 'date' | 'number'; // Add more later
 declare interface IField {
-    type: FieldTypes;
     required?: boolean;
     email?: boolean;
+    label: string;
 }
 
 declare interface IFields {
@@ -54,11 +53,18 @@ declare interface IEmailServer {
     errorMessage: string;
 }
 
+declare interface IEmail {
+    sender: string;
+    to: string;
+    subject: string;
+    message: string;
+}
 declare interface IContactPage extends IPageConfig {
-    fields: IFields;
     email: string;
     emailServer: IEmailServer;
     formCaption: string;
+    selections: string[];
+    fields: IFields;
 }
 
 declare interface IMusicService {

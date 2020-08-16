@@ -1,4 +1,4 @@
-<section id="music-services-page" class='full-height column fade-in padded'>
+<section id="music-services-page" class='column fade-in padded'>
    <h1 *ngIf="showTitle" class="mat-display-1">{{pageConfig.title}}</h1>
    <h1 *ngIf="showSubtitle" class="mat-subheading-1">{{pageConfig.subtitle}}</h1>
    <section id="services-list" class="column">
@@ -10,7 +10,8 @@
                <p class="service-summary">{{service.content}}</p>
             </div>
             <div class="service-actions">
-               <button color="primary" mat-stroked-button>{{service.actionText}}</button>
+               <button color="primary" mat-stroked-button
+                  (click)="handleContactRouteChange(service.option)">{{service.actionText}}</button>
             </div>
          </div>
       </mat-card>

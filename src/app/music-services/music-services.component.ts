@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
 import { ConfigService } from '../services/config.service';
-import { FileUtil } from '../util-classes';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-music-services',
     templateUrl: './music-services.component.html',
     styleUrls: ['./music-services.component.scss']
 })
-export class MusicServicesComponent extends FileUtil {
+export class MusicServicesComponent {
 
     pageConfig: IConfig["musicServicesPage"];
 
     constructor(
-        private configService: ConfigService
+        private configService: ConfigService,
+        private router: Router
     ) {
-        super();
         this.pageConfig = this.configService.config.musicServicesPage;
     }
 
@@ -34,4 +34,11 @@ export class MusicServicesComponent extends FileUtil {
         return !!this.pageConfig.subtitle;
     }
 
+    handleContactRouteChange(option: string): void {
+        this.router.navigate(['/contact'], { state: { option } });
+    }
+
+    resolveFilename(filename: string): string {
+        return `../../assets/images/${filename}`;
+    }
 }

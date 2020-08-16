@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { ConfigService } from '../services/config.service';
 import { FormGroup } from '@angular/forms';
 import { ContactService } from '../services/contact.service';
+import { Subscription } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     selector: 'app-contact',
     templateUrl: './contact.component.html',
     styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent {
+export class ContactComponent implements AfterViewInit {
     pageConfig: IConfig['contactPage'];
     contactForm: FormGroup;
     submitting = false;
@@ -16,14 +18,40 @@ export class ContactComponent {
     error: string;
     success: string;
     interpolatedFormCaption: string[];
+    subscriptions: Subscription[] = [];
+    selectionFromNavigation: string;
+    @ViewChild('contactPage') contactPage: ElementRef;
 
     constructor(
         private configService: ConfigService,
         private contactService: ContactService,
+        private route: ActivatedRoute,
+        private router: Router,
     ) {
         this.pageConfig = this.configService.config.contactPage;
         this.contactForm = this.contactService.buildContactForm(this.pageConfig);
         this.interpolatedFormCaption = this.interpolateFormCaption();
+        this.handleInitialNavigation();
+    }
+
+    ngAfterViewInit(): void {
+        this.scrollToTop();
+    }
+
+    scrollToTop(): void {
+        this.contactPage.nativeElement.scrollIntoView();
+    }
+
+    handleInitialNavigation(): void {
+        const navigation = this.router.getCurrentNavigation();
+        const defaultSelection = this.pageConfig.selections[0];
+
+        this.selectionFromNavigation = navigation?.extras.state?.option || defaultSelection;
+        this.subscriptions.push(
+            this.route.queryParams.subscribe(() => {
+                this.contactForm.controls['subject'].setValue(this.selectionFromNavigation);
+            }),
+        );
     }
 
     interpolateFormCaption(): string[] {
@@ -62,5 +90,9 @@ export class ContactComponent {
 
     get showSubtitle(): boolean {
         return !!this.pageConfig.subtitle;
+    }
+
+    get shouldHideForm(): boolean {
+        return this.submitted || this.submitting;
     }
 }

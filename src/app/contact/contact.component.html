@@ -1,6 +1,6 @@
-<section class='full-height column fade-in'>
-    <h1 *ngIf="showTitle"class='mat-display-1'>{{pageConfig.title}}</h1>
-    <h2 *ngIf="showSubtitle"class='mat-subheading-1'>{{pageConfig.subtitle}}</h2>
+<section #contactPage class='full-height column fade-in'>
+    <h1 *ngIf="showTitle" class='mat-display-1'>{{pageConfig.title}}</h1>
+    <h2 *ngIf="showSubtitle" class='mat-subheading-1'>{{pageConfig.subtitle}}</h2>
     <div *ngIf='submitting'>
         <p>...Sending</p>
         <div class='row center-h'>
@@ -16,31 +16,35 @@
             </ng-template>
             {{interpolatedFormCaption[1]}}
         </label>
-        <form *ngIf='!submitting && !submitted' class='column' [formGroup]='contactForm'
+        <form class='column' [class.hide]="submitting || submitted" [formGroup]='contactForm'
             (ngSubmit)='handleSubmit($event)'>
             <mat-form-field appearance="fill">
-                <mat-label>Your Name</mat-label>
+                <mat-label>{{pageConfig.fields.name.label}}</mat-label>
                 <input matInput formControlName='name' placeholder='Ex. John Doe' required>
                 <mat-error *ngIf="contactForm.controls.name.invalid">
                     {{this.displayError('name')}}
                 </mat-error>
             </mat-form-field>
             <mat-form-field appearance="fill">
-                <mat-label>Your Email</mat-label>
+                <mat-label>{{pageConfig.fields.sender.label}}</mat-label>
                 <input matInput formControlName='sender' placeholder='Ex. johndoe@example.com' required>
                 <mat-error *ngIf="contactForm.controls.sender.invalid">
                     {{this.displayError('sender')}}
                 </mat-error>
             </mat-form-field>
             <mat-form-field appearance="fill">
-                <mat-label>Subject</mat-label>
-                <input matInput formControlName='subject' required>
+                <mat-label>{{pageConfig.fields.subject.label}}</mat-label>
+                <mat-select formControlName="subject" required>
+                    <mat-option *ngFor="let selection of pageConfig.selections" [value]="selection">
+                        {{selection}}
+                    </mat-option>
+                </mat-select>
                 <mat-error *ngIf="contactForm.controls.subject.invalid">
-                    {{this.displayError('subject')}}
+                    {{this.displayError('message')}}
                 </mat-error>
             </mat-form-field>
             <mat-form-field appearance="fill">
-                <mat-label>Your Message</mat-label>
+                <mat-label>{{pageConfig.fields.message.label}}</mat-label>
                 <textarea matInput formControlName='message' required></textarea>
                 <mat-error *ngIf="contactForm.controls.message.invalid">
                     {{this.displayError('message')}}
