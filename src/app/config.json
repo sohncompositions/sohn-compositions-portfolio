@@ -85,6 +85,50 @@
         "title": "Music Service for Film & Games 🎧",
         "subtitle": "Which samples would you like to hear?"
     },
+    "musicServicesPage": {
+        "title": "Services",
+        "subtitle": "",
+        "services": [
+            {
+                "title": "Film Score",
+                "content": "Carefully chosen colors and textures to enhance the story on screen. Whatever the genre that you want to bring to life, I'll write memorable themes and compelling underscore to captivate your audience.",
+                "imgFilename": "film-score-service.png",
+                "option": "Film Score",
+                "actionText": "Get a Quote!"
+            },
+            {
+                "title": "Game Soundtrack",
+                "content": "Engaging music that will immerse your player in the world that you're developing. From chiptune style to modern, there is a catchy tune waiting to be written.",
+                "imgFilename": "game-soundtrack-service.png",
+                "option": "Game Soundtrack",
+                "actionText": "Get a Quote!"
+            },
+            {
+                "title": "Song Arrangement",
+                "content": "Pairing music to your lyrics to create a powerful song. A collaborative process that will enhance the message of your lyrics. Pitch me your idea and I'll do the rest.",
+                "imgFilename": "song-arrangement-service.png",
+                "option": "Song Arrangement",
+                "actionText": "Get a Quote!"
+            }
+        ],
+        "sellingPointSection": {
+            "title": "Why Choose Me?",
+            "sellingPoints": [
+                {
+                    "title": "Versatile and Unique Background",
+                    "content": "The combination of earning a music degree, conducting in front of orchestras, playing in a rock band as well as a non-conventional junkyard percussion group (similiar to STOMP) has given me a unique perspective in writing music. Whether you need music for a quirky, comedic sketch or a sweeping orchestral fantasy, I have the experience to back it up.  But don't take my word for it, sample and hear some of my music here!"
+                },
+                {
+                    "title": "Dedicated & Reliable",
+                    "content": "I understand that every project is unique and important to you. That's why I make sure that my schedule is open before committing to yours so that I can give full attention and effort to the project at hand. I do my best to focus only on one project at a time so that I can follow through and deliver on time."
+                },
+                {
+                    "title": "Quality Assured",
+                    "content": "Feel confident that you are going to get the best quality music for your budget.  I ensure that you are happy with the music composition and production quality upon delivery.  That's how I have retained so many clients and I hope to do the same for you."
+                }
+            ]
+        }
+    },
     "bioPage": {
         "title": "Joshua Sohn",
         "subtitle": "Film Composer / Songwriter",
@@ -125,23 +169,29 @@
             "successMessage": "Your email has been sent!",
             "errorMessage": "Sorry! There was a problem sending the email."
         },
+        "selections": [
+            "Other",
+            "Film Score",
+            "Game Soundtrack",
+            "Song Arrangement"
+        ],
         "fields": {
             "name": {
-                "type": "text",
-                "required": true
+                "required": true,
+                "label": "Your Name"
             },
             "sender": {
-                "type": "text",
                 "required": true,
-                "email": true
+                "email": true,
+                "label": "Your Email"
             },
             "subject": {
-                "type": "text",
-                "required": true
+                "required": true,
+                "label": "Select A Service"
             },
             "message": {
-                "type": "text",
-                "required": true
+                "required": true,
+                "label": "Your Message"
             }
         }
     },

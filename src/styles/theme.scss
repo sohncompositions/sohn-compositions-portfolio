@@ -5,7 +5,7 @@ $custom-typography: mat-typography-config(
 );
 @include mat-core($custom-typography);
 
-$primary: (
+$mat-primary: (
     50: #ffe7e6,
     100: #ffc2bf,
     200: #ff9995,
@@ -38,7 +38,7 @@ $primary: (
     ),
 );
 
-$accent: (
+$mat-accent: (
     50: #eff0f0,
     100: #d7dada,
     200: #bdc1c1,
@@ -71,10 +71,12 @@ $accent: (
     ),
 );
 
-$app-primary: mat-palette($primary);
-$app-accent: mat-palette($accent);
+$app-primary: mat-palette($mat-primary);
+$app-accent: mat-palette($mat-accent);
 $app-warn: mat-palette($mat-red);
 
-$app-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
+// Add custom themes here
+$app-dark-theme: mat-dark-theme($app-primary, $app-accent, $app-warn);
+$app-light-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 
-@include angular-material-theme($app-theme);
+@include angular-material-theme($app-dark-theme);

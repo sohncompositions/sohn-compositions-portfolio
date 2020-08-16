@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, ValidatorFn } from '@angular/forms';
 import { EmailService } from './email.service';
 import { catchError } from 'rxjs/operators';
-import { throwError } from 'rxjs';
+import { throwError, Observable } from 'rxjs';
 
 @Injectable({
     providedIn: 'root'
@@ -48,7 +48,7 @@ export class ContactService {
         );
     }
 
-    submitContactForm(email) {
+    submitContactForm(email: IEmail): Observable<unknown> {
         return this.emailService.sendEmail(email)
             .pipe(
                 catchError(err => throwError(err.message))

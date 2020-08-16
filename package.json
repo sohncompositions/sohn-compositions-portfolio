@@ -1,10 +1,11 @@
 {
   "name": "sohn-compositions-portfolio",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "repository": {
     "url": "https://github.com/sohncompositions/sohn-compositions-portfolio"
   },
   "scripts": {
+    "lint": "eslint",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build"
@@ -33,8 +34,10 @@
     "@angular/compiler-cli": "~9.0.2",
     "@angular/language-service": "~9.0.2",
     "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "^3.8.0",
+    "@typescript-eslint/parser": "^3.8.0",
+    "eslint": "^7.6.0",
     "ts-node": "~8.3.0",
-    "tslint": "~5.18.0",
     "typescript": "~3.7.5"
   }
 }

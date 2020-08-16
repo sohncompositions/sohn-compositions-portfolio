@@ -102,6 +102,10 @@ mat-toolbar-row {
   animation: fade-in 0.8s;
 }
 
+.center-text {
+  text-align: center;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;

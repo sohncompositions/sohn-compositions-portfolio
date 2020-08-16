@@ -1,5 +1,6 @@
-declare interface ILogo extends IAsset { }
-declare interface IIcon extends IAsset { }
+/* eslint-disable @typescript-eslint/no-empty-interface */
+type ILogo = IAsset
+type IIcon = IAsset
 declare interface IAsset {
     filename: string;
 }
@@ -28,7 +29,7 @@ declare interface IHeader { }
 declare interface IFooter {
     welcomeMessage: string;
 }
-declare interface IHomePage extends IPageConfig { }
+type IHomePage = IPageConfig;
 
 declare interface IBioPage extends IPageConfig {
     bio: string[];
@@ -36,11 +37,10 @@ declare interface IBioPage extends IPageConfig {
     referralTitle: string;
 }
 
-declare type FieldTypes = 'text' | 'date' | 'number'; // Add more later
 declare interface IField {
-    type: FieldTypes;
     required?: boolean;
     email?: boolean;
+    label: string;
 }
 
 declare interface IFields {
@@ -53,11 +53,39 @@ declare interface IEmailServer {
     errorMessage: string;
 }
 
+declare interface IEmail {
+    sender: string;
+    to: string;
+    subject: string;
+    message: string;
+}
 declare interface IContactPage extends IPageConfig {
-    fields: IFields;
     email: string;
     emailServer: IEmailServer;
     formCaption: string;
+    selections: string[];
+    fields: IFields;
+}
+
+declare interface IMusicService {
+    title: string;
+    content: string;
+    imgFilename: string;
+    option: string;
+    actionText: string;
+}
+
+declare interface ISellingPoints {
+    title: string;
+    content: string;
+}
+
+declare interface IMusicServicesPage extends IPageConfig {
+    services: IMusicService[];
+    sellingPointSection: {
+        title: string;
+        sellingPoints: ISellingPoints[];
+    }
 }
 
 declare interface ISocialMediaLink {
@@ -72,5 +100,6 @@ declare interface IConfig {
     homePage: IHomePage;
     bioPage: IBioPage;
     contactPage: IContactPage;
+    musicServicesPage: IMusicServicesPage;
     socialMediaLinks: ISocialMediaLink[];
 }
