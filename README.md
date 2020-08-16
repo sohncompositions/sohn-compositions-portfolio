@@ -103,6 +103,40 @@ The [Configuration File](https://github.com/sohncompositions/sohn-compositions-p
         "title": "",
         "subtitle": "Subtitle"
     },
+    // (New for version 2.1.0) Page config for music services
+    "musicServicesPage":{
+        "title": "Title",
+        "subtitle": "Subtitle",
+        "services": [
+            {
+                "title": "Service 1",
+                "content": "service 1 content",
+                "imgFilename": "service1.png",
+                "option": "Service 1 Option", // Must match to a value specified in contactPage.selections[]
+                "actionText": "Get a Quote!"
+            },
+            {
+                "title": "Service 2",
+                "content": "service 2 content",
+                "imgFilename": "service2.png",
+                "option": "Service 2 Option",
+                "actionText": "Get a Quote!"
+            }
+        ],
+        "sellingPointSection": {
+            "title": "Selling Points Title",
+            "sellingPoints": [
+                {
+                    "title": "Title 1",
+                    "content": "Selling point 1 content"
+                },
+                {
+                    "title": "Title 2",
+                    "content": "Selling point 2 content"
+                }
+            ]
+        }
+    },
     "bioPage": {
         "title": "Title",
         "subtitle": "Subtitle",
@@ -129,6 +163,12 @@ The [Configuration File](https://github.com/sohncompositions/sohn-compositions-p
         "email": "example@gmail.com",
         // You can make a link from the email by using {email} anywhere in the caption message:
         "formCaption": "Send an email to {email} or fill below",
+        // (updated for Version 2.1.0) Add services to your list of dropdown options on the contact page email form. These are now the 'Subject' field values.
+        "selections":[
+            "Other",
+            "Service 1",
+            "Service 2"
+        ],
         "emailServer": {
             // API endpoint for sending emails
             "url": "https://<your-node-emailer-domain>.com/api/emailer"
@@ -140,20 +180,25 @@ The [Configuration File](https://github.com/sohncompositions/sohn-compositions-p
         "fields": {
             "name": {
                 "type": "text",
-                "required": true
+                "required": true,
+                // (Updated for version 2.1.0) You can add custom labels to each of the email form fields
+                "label": "Your Name"
             },
             "sender": {
                 "type": "text",
                 "required": true,
-                "email": true
+                "email": true,
+                "label":"Your Email"
             },
             "subject": {
                 "type": "text",
-                "required": true
+                "required": true,
+                "label": "Select A Service"
             },
             "message": {
                 "type": "text",
-                "required": true
+                "required": true,
+                "label": "Your Message"
             }
         }
     },
