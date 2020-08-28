@@ -33,7 +33,7 @@
                 </mat-error>
             </mat-form-field>
             <mat-form-field appearance="fill">
-                <mat-label>{{pageConfig.fields.subject.label}}</mat-label>
+                <mat-label class="custom-mat-select-label">{{pageConfig.fields.subject.label}}</mat-label>
                 <mat-select formControlName="subject" required>
                     <mat-option *ngFor="let selection of pageConfig.selections" [value]="selection">
                         {{selection}}

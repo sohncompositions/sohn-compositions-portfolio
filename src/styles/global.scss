@@ -19,6 +19,14 @@ mat-toolbar-row {
   padding: 0;
 }
 
+.custom-mat-select-label {
+  font-size: 1.1rem;
+}
+
+mat-select {
+  padding: 0.3rem;
+}
+
 .padded {
   padding: 0.5rem;
 }
