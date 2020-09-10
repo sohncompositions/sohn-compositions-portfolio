@@ -44,7 +44,6 @@ CNAME
 url.txt
 tmp.txt
 *.bat
-.htaccess
 
 # System Files
 .DS_Store
