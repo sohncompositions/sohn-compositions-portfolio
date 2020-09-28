@@ -23,8 +23,8 @@ export class AudioService {
     }
 
     getAudioSource(filename: string): Observable<ArrayBuffer> {
-        const { apiURL } = this.configService.config.audioPlayer;
-        return this.httpClient.get(`${apiURL}/audio/${filename}`, { responseType: 'arraybuffer' });
+        const { url } = this.configService.config.audioPlayer;
+        return this.httpClient.get(`${url}/${filename}`, { responseType: 'arraybuffer' });
     }
 
     setPlaying(playing: boolean): void {
