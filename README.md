@@ -78,7 +78,7 @@ The [Configuration File](https://github.com/sohncompositions/sohn-compositions-p
 {
     "audioPlayer": {
         // (New for version 3.0.0) API endpoint for retrieving audio track files
-        "url": "https://<audio-server-domain>.com/api/audio"
+        "url": "https://<audio-server-domain>/api/audio"
         // Adds buttons to home page which randomly plays a song matching the selected category
         "categories": [
             "Demo",
@@ -178,7 +178,7 @@ The [Configuration File](https://github.com/sohncompositions/sohn-compositions-p
         ],
         "emailServer": {
             // API endpoint for sending emails
-            "url": "https://<your-node-emailer-domain>.com/api/emailer"
+            "url": "https://<your-node-emailer-domain>/api/emailer"
             // Status messages which display after email has been sent:
             "successMessage": "Your email has been sent!",
             "errorMessage": "Sorry! There was a problem sending the email."
@@ -223,6 +223,6 @@ The [Configuration File](https://github.com/sohncompositions/sohn-compositions-p
 This site uses [SendGrid](https://sendgrid.com/) to send emails to your account. If you decide in the future to change your email there are a couple steps you'll have to perform:
 - Register the new address in your SendGrid account.
 - Ensure that you still have a valid sendgrid API key. You can find these listed in your SendGrid account.
-- From [Heroku](https://heroku.com/), under the Settings tab, open the 'Config Vars' section. You'll need to update the `EMAIL` configuration variable to the new email address.
+- From Emailer app within [Heroku](https://heroku.com/), under the Settings tab, open the 'Config Vars' section. You'll need to update the `EMAIL` configuration variable to the new email address.
 - Check that the `SENDGRID_API_KEY` configuration variable matches the one registered to your SendGrid account. If not you'll have to update it.
 - Update the email address property in the "contactPage" section of the [Configuration File](https://github.com/sohncompositions/sohn-compositions-portfolio/blob/master/client/src/app/config.json).
