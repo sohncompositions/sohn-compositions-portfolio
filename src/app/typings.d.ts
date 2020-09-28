@@ -10,7 +10,8 @@ declare interface IPageConfig {
 }
 
 declare interface IAudioPlayer {
-    categories: string[],
+    apiURL: string;
+    categories: string[];
     tracks: ITrack[]
 }
 

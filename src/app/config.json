@@ -1,5 +1,6 @@
 {
     "audioPlayer": {
+        "apiURL": "http://localhost:8080/audio",
         "categories": [
             "Action",
             "Adventure",

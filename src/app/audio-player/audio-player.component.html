@@ -14,6 +14,7 @@
         <mat-icon color='accent' fontSet="fas" fontIcon="fa-step-forward">
         </mat-icon>
     </button>
-    <audio #audioPlayer id='audio-player' (play)='handlePlay()' (pause)='handlePause()' [src]="getAudioSource()"
-        controls controlslist='nodownload' (ended)='handleNext()' autoplay></audio>
+    <audio (contextmenu)="false" #audioPlayer id='audio-player' (play)='handlePlay()' (pause)='handlePause()'
+        [controls]="!error" controlslist='nodownload' (ended)='handleNext()' autoplay></audio>
+    <mat-error *ngIf="error">There was an error loading the track</mat-error>
 </div>
