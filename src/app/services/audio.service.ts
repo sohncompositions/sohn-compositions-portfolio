@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ConfigService } from './config.service';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 
 @Injectable({
@@ -24,7 +24,7 @@ export class AudioService {
 
     getAudioSource(filename: string): Observable<ArrayBuffer> {
         const { apiURL } = this.configService.config.audioPlayer;
-        return this.httpClient.get(`${apiURL}/${filename}`, { responseType: 'arraybuffer' });
+        return this.httpClient.get(`${apiURL}/audio/${filename}`, { responseType: 'arraybuffer' });
     }
 
     setPlaying(playing: boolean): void {
