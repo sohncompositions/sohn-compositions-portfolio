@@ -24,3 +24,9 @@ Version 2.1.0
 - Replaced 'subject' field with a dropdown select box to integrate with services page
 - Added customization of field labels to config.json
 - Added robots.txt, sitemap and html metadata to increase SEO effectiveness
+
+Version 3.0.0
+**9-28-2020**
+- Migrated audio file management to Cloudinary
+- Removed local audio tracks
+- Updated `config.json` to point to external audio server hosted by Heroku.

@@ -1,5 +1,6 @@
 {
     "audioPlayer": {
+        "url": "https://sohn-compositions-audio.herokuapp.com/api/audio",
         "categories": [
             "Action",
             "Adventure",

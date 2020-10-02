@@ -1,5 +1,6 @@
-import { Component, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component, ViewChild, ElementRef, HostListener, AfterViewInit, OnDestroy } from '@angular/core';
 import { AudioService } from '../services/audio.service';
+import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'app-audio-player',
@@ -7,35 +8,54 @@ import { AudioService } from '../services/audio.service';
     styleUrls: ['./audio-player.component.scss'],
 })
 
-export class AudioPlayerComponent {
+export class AudioPlayerComponent implements AfterViewInit, OnDestroy {
 
     @ViewChild('audioPlayer') audioPlayer: ElementRef<HTMLAudioElement>;
+    subscriptions: Subscription[] = [];
+    error = false;
 
     constructor(public audioService: AudioService) { }
 
-    handleSelectTrack(track) {
-        this.audioService.changeTrack(track);
-    }
-    getAudioSource() {
-        const path = '../../assets/audio/';
-        return this.audioService.currentTrack ? path + this.audioService.currentTrack.filename : '';
+    ngAfterViewInit(): void {
+        this.subscriptions.push(
+            this.audioService.onTrackChange.subscribe(track => {
+                this.audioService.getAudioSource(track.filename)
+                    .subscribe(data => {
+                        const blob = new Blob([data], { type: "audio/mp3" });
+                        const url = window.URL.createObjectURL(blob);
+                        this.audioPlayer.nativeElement.src = url;
+                        this.error = false;
+                    }, () => {
+                        this.error = true;
+                        this.audioPlayer.nativeElement.src = '';
+                    });
+            })
+        );
     }
 
-    handleNext() {
+    ngOnDestroy(): void {
+        this.subscriptions.forEach(sub => sub.unsubscribe());
+    }
+
+    handleSelectTrack(track: ITrack): void {
+        this.audioService.changeTrack(track);
+    }
+
+    handleNext(): void {
         this.audioService.goToNextTrack();
     }
 
-    handlePrev() {
+    handlePrev(): void {
         this.audioService.goToPrevTrack();
     }
 
     @HostListener('play')
-    handlePlay() {
+    handlePlay(): void {
         this.audioService.setPlaying(true);
     }
 
     @HostListener('pause')
-    handlePause() {
+    handlePause(): void {
         this.audioService.setPlaying(false);
     }
 }

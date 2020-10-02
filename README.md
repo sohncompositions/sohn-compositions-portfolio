@@ -1,7 +1,8 @@
 # Table of Contents
 - [Overview](#overview)
 - [Updating Guide](#updating-guide)
-- [Uploading Files](#uploading-files)
+- [Uploading Image Files](#uploading-image-files)
+- [Uploading Audio Files](#uploading-audio-files)
 - [Configuration File](#configuration-file)
 - [SendGrid](#sendgrid)
 
@@ -12,7 +13,7 @@ Site content is rendered based on the contents of two things:
 - [Configuration File](https://github.com/sohncompositions/sohn-compositions-portfolio/blob/master/client/src/app/config.json)
 - [Assets Folder](https://github.com/sohncompositions/sohn-compositions-portfolio/tree/master/client/src/assets)
 
-There is also a separate [Email Server](https://github.com/sohncompositions/sohn-compositions-emailer) hosted by [Heroku](https://www.heroku.com) which the application communicates with. 
+There is also a separate [Email Server](https://github.com/sohncompositions/sohn-compositions-emailer) and [Audio File Server](https://github.com/sohncompositions/sohn-compositions-audio) hosted by [Heroku](https://www.heroku.com) which the application communicates with. 
 
 ##### Applications Required
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
@@ -22,16 +23,16 @@ There is also a separate [Email Server](https://github.com/sohncompositions/sohn
 ---
 ### Updating Guide
 
-##### Initial Setup (You probably only need to do these once)
+#### Initial Setup (You probably only need to do these once)
 - Clone the [Repository](https://github.com/sohncompositions/sohn-compositions-portfolio) onto your machine
 - Open project in VS Code and run the task `Setup Sohn Compositions Portfolio`. This installs the necessary tools to run the application from within a Docker container
 
-##### Testing Changes
+#### Testing Changes
 - Run the task `Run Sohn Compositions Portfolio`. This starts the development server which serves the app locally on your machine.
 - Visit [Localhost](http://localhost:4200) in a browser. This make take a few moments to load. Check the docker dashboard to view the development build status.
 - Start making changes:
     - [Assets Folder](https://github.com/sohncompositions/sohn-compositions-portfolio/tree/master/client/src/assets)
-        - Contains image and audio files.
+        - Contains images and icons (as of version 3.0.0 no longer contains `audio/` folder).
         - See [below](#Uploading-Files) for more details.
         
     - [Configuration File](https://github.com/sohncompositions/sohn-compositions-portfolio/blob/master/client/src/app/config.json)
@@ -40,28 +41,32 @@ There is also a separate [Email Server](https://github.com/sohncompositions/sohn
 
 - Once you're happy with your changes you will need to commit them. Use VS code Source Control extension to make a commit with a specific message stating what changes were made. Using the master branch is fine.
 
-##### Deploying
-- Run the task `Build Sohn Compositions Portfolio`. This compiles the source code into a production ready format. You should see a new folder created called `dist`, which contains another folder called `sohn-compositions-portfolio`. Upload `sohn-compositions-portfolio` and all its contents to whatever hosting service you are using. *Don't upload `dist` itself!*
+#### Deploying
+- Run the task `Build Sohn Compositions Portfolio`. This compiles the source code into a production ready format. You should see a new folder created called `dist`, which contains another folder called `sohncompositions.com`. Upload `sohncompositions.com` and all its contents to whatever hosting service you are using. *Don't upload `dist` itself!*
 
 ---
 
-### Uploading Files
-Uploading files is pretty straightforward but there are a couple important things to remember:
-- The [Assets Folder](https://github.com/sohncompositions/sohn-compositions-portfolio/tree/master/client/src/assets) contains 3 folders, all of which may be updated: 
-    - [Audio](https://github.com/sohncompositions/sohn-compositions-portfolio/tree/master/client/src/assets/audio)
-        - Contains `.mp3` files which are used by the site's audio player.
+### Uploading Image Files
+Uploading images is pretty straightforward but there are a couple important things to remember:
+- The [Assets Folder](https://github.com/sohncompositions/sohn-compositions-portfolio/tree/master/client/src/assets) contains 2 folders, each of which may be updated: 
     - [Icons](https://github.com/sohncompositions/sohn-compositions-portfolio/tree/master/client/src/assets/icons) 
         - *Warning: Currently `sohn-logo.svg` is the only file that is customizeable. Any additional `.svg` files added here won't do anything.*
     - [Images](https://github.com/sohncompositions/sohn-compositions-portfolio/tree/master/client/src/assets/images)
         - Every image on the site reads from this location. Any file (with a few exceptions listed later below) can be added here and referenced in the [Configuration File](https://github.com/sohncompositions/sohn-compositions-portfolio/blob/master/client/src/app/config.json).
-- Use a consistent naming convention. I recommend `lowercase` with `hyphens` (e.g. example-file.png).
-- All image files (except for icons) should be `.png` and all audio files should be `.mp3`.
+- Use a consistent naming convention. I recommend `lowercase` with `hyphens` (such as example-file.png).
+- All image files (except for icons) should be `.png`.
 - There are several files that are not referenced in the [Configuration File](https://github.com/sohncompositions/sohn-compositions-portfolio/blob/master/client/src/app/config.json) because they are simply harded code into the site:
     - [assets/icons/sohn-logo.svg](https://github.com/sohncompositions/sohn-compositions-portfolio/blob/master/client/src/assets/icons/sohn-logo.svg)
     - [assets/images/sohn-wallpaper.png](https://github.com/sohncompositions/sohn-compositions-portfolio/blob/master/client/src/assets/images/sohn-wallpaper.png)
     - [assets/images/sohn-headshot.png](https://github.com/sohncompositions/sohn-compositions-portfolio/blob/master/client/src/assets/images/sohn-headshot.png)
     
      You are welcome to replace a file from this list, but if you do, just make sure to retain the same filename. Otherwise the site will not be able to find it.
+---
+### Uploading Audio Files
+- As of version 3.0.0, audio files are no longer stored by the site host. Audio files must be uploaded via [Cloudinary](https://cloudinary.com).
+- Once you've uploaded a new audio file to Cloudinary, simply enter the filename under the track's `filename` property within the [Configuration File](#configuration-file) to make it available for streaming.
+- For more details and instructions on how to configure the audio server, visit [sohn-compositions-audio](https://github.com/sohncompositions/sohn-compositions-audio#configuring-server).
+
 ---
 ### Configuration File
 The [Configuration File](https://github.com/sohncompositions/sohn-compositions-portfolio/blob/master/client/src/app/config.json) contains all the settings/metadata you need for customizing site content. You can reference new audio tracks and images that you've uploaded, edit page titles, and customize labels and subtitles. 
@@ -72,12 +77,14 @@ The [Configuration File](https://github.com/sohncompositions/sohn-compositions-p
 /* Example Template */
 {
     "audioPlayer": {
+        // (New for version 3.0.0) API endpoint for retrieving audio track files
+        "url": "https://<audio-server-domain>/api/audio"
         // Adds buttons to home page which randomly plays a song matching the selected category
         "categories": [
             "Demo",
             "Test"
         ],
-        // All the playable tracks. Displayed in playlist menu.
+        // All the playable tracks. Displayed in playlist menu. Make sure the `filename` property matches exactly with what exists in your Cloudinary account
         "tracks": [
             {
                 "title": "Track 1",
@@ -171,7 +178,7 @@ The [Configuration File](https://github.com/sohncompositions/sohn-compositions-p
         ],
         "emailServer": {
             // API endpoint for sending emails
-            "url": "https://<your-node-emailer-domain>.com/api/emailer"
+            "url": "https://<your-node-emailer-domain>/api/emailer"
             // Status messages which display after email has been sent:
             "successMessage": "Your email has been sent!",
             "errorMessage": "Sorry! There was a problem sending the email."
@@ -216,6 +223,6 @@ The [Configuration File](https://github.com/sohncompositions/sohn-compositions-p
 This site uses [SendGrid](https://sendgrid.com/) to send emails to your account. If you decide in the future to change your email there are a couple steps you'll have to perform:
 - Register the new address in your SendGrid account.
 - Ensure that you still have a valid sendgrid API key. You can find these listed in your SendGrid account.
-- From [Heroku](https://heroku.com/), under the Settings tab, open the 'Config Vars' section. You'll need to update the `EMAIL` configuration variable to the new email address.
+- From Emailer app within [Heroku](https://heroku.com/), under the Settings tab, open the 'Config Vars' section. You'll need to update the `EMAIL` configuration variable to the new email address.
 - Check that the `SENDGRID_API_KEY` configuration variable matches the one registered to your SendGrid account. If not you'll have to update it.
 - Update the email address property in the "contactPage" section of the [Configuration File](https://github.com/sohncompositions/sohn-compositions-portfolio/blob/master/client/src/app/config.json).
