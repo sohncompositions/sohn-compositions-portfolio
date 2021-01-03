@@ -1,6 +1,6 @@
 {
     "audioPlayer": {
-        "url": "https://sohn-compositions-audio.herokuapp.com/api/audio",
+        "url": "https://res.cloudinary.com/sohn-compositions/video/upload/v1601601633/Portfolio",
         "categories": [
             "Action",
             "Adventure",
