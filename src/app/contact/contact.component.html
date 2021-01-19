@@ -50,7 +50,7 @@
                     {{this.displayError('message')}}
                 </mat-error>
             </mat-form-field>
-            <button type='submit' [disabled]='!contactForm.valid' color='primary' mat-stroked-button>Send</button>
+            <button id="contact-form-submit-button" type='submit' [disabled]='!contactForm.valid' color='primary' mat-stroked-button>Send</button>
         </form>
     </div>
     <div *ngIf='submitted && !submitting'>

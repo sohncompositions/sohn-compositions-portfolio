@@ -7,6 +7,7 @@ p {
 input {
   height: 0.9rem;
 }
+
 button[disabled]:hover {
   cursor: not-allowed;
 }
@@ -15,12 +16,26 @@ button[disabled]:hover {
   padding: 0;
   margin: 0;
 }
+
 textarea {
   height: 7rem;
 }
 
+.form-container {
+  padding: 1rem;
+
+  label {
+    padding: 3px;
+  }
+  form {
+    #contact-form-submit-button {
+      height: 3rem;
+    }
+  }
+}
+
 .hide {
-  visibility: none;
+  display: none;
 }
 
 @media (min-width: $breakpoint-sm) {
