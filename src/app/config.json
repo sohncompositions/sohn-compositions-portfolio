@@ -1,6 +1,6 @@
 {
     "audioPlayer": {
-        "url": "https://sohn-compositions-audio.herokuapp.com/api/audio",
+        "url": "https://res.cloudinary.com/sohn-compositions/video/upload/v1601601633/Portfolio",
         "categories": [
             "Action",
             "Adventure",
@@ -117,7 +117,7 @@
             "sellingPoints": [
                 {
                     "title": "Versatile and Unique Background",
-                    "content": "The combination of earning a music degree, conducting in front of orchestras, playing in a rock band as well as a non-conventional junkyard percussion group (similiar to STOMP) has given me a unique perspective in writing music. Whether you need music for a quirky, comedic sketch or a sweeping orchestral fantasy, I have the experience to back it up.  But don't take my word for it, sample and hear some of my music here!"
+                    "content": "The combination of earning a music degree, conducting in front of orchestras, and playing in a junkyard percussion group (similiar to STOMP) has given me a unique perspective in writing music. Whether you need music for a quirky, comedic sketch or a sweeping orchestral fantasy, I have the experience to back it up.  But don't take my word for it, sample and listen to my music!"
                 },
                 {
                     "title": "Dedicated & Reliable",
@@ -135,8 +135,8 @@
         "subtitle": "Film Composer / Songwriter",
         "bio": [
             "Hi! I team up with great artists, film makers, game developers and businesses to write music that help elevate, engage, and inspire their message.",
-            "My name is Joshua Sohn. Much of my childhood was surrounded by the tune of church hymns, classical symphonies and rock music.  The turning point of my musical journey came when my mother passed away at age 14. While coping her loss, I used music to help express what I was feeling. The power of music became a source of healing and now would like to pass that on to others with my own writing.",
-            "Now almost 20 years later, I've developed a career in music, working with TV (Air Force Reserve, Dwight In Shining Armor), feature films (Resilience and the Lost Gems, The Adventure of A.R.I.: My Robot Friend) and various production music companies including Velvet Green Music, AMADEA, and Gothic Storm."
+            "My name is Joshua Sohn. Much of my childhood was surrounded by the tune of church hymns, classical symphonies and rock 'n roll.  The turning point of my musical journey came when my mother passed away at age 14. While coping her loss, I used music to help express what I was feeling. The power of music became a source of healing and now would like to pass that on to others with my own writing.",
+            "Now almost 20 years later, I've developed a career in music, working in TV (Air Force Reserve, Dwight In Shining Armor), feature films (Resilience and the Lost Gems, The Adventure of A.R.I.: My Robot Friend) and various production music companies including Velvet Green Music, AMADEA, and Gothic Storm."
         ],
         "referralTitle": "Reviews",
         "referrals": [
