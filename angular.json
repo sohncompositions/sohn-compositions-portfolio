@@ -2,6 +2,7 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
+
   "projects": {
     "sohn-compositions-portfolio": {
       "projectType": "application",
@@ -30,9 +31,7 @@
               "src/robots.txt",
               "src/.htaccess"
             ],
-            "styles": [
-              "src/styles/index.scss"
-            ],
+            "styles": ["src/styles/index.scss"],
             "scripts": []
           },
           "configurations": {
@@ -71,6 +70,7 @@
           }
         },
         "serve": {
+          "poll": 1000,
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "sohn-compositions-portfolio:build"
@@ -94,13 +94,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles/index.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles/index.scss"],
             "scripts": []
           }
         },
@@ -112,9 +107,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {

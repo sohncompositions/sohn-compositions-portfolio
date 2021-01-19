@@ -6,17 +6,20 @@
         {
             "label": "Setup Sohn Compositions Portfolio",
             "type": "shell",
-            "command": "./scripts/setup.cmd"
+            "command": "./scripts/setup.cmd",
+            "problemMatcher": []
         },
         {
             "label": "Run Sohn Compositions Portfolio",
             "type": "shell",
-            "command": "./scripts/run.cmd"
+            "command": "./scripts/run.cmd",
+            "problemMatcher": []
         },
         {
             "label": "Build Sohn Compositions Portfolio",
             "type": "shell",
-            "command": "./scripts/build.cmd"
+            "command": "./scripts/build.cmd",
+            "problemMatcher": []
         }
     ]
 }
