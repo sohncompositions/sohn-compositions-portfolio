@@ -8,7 +8,9 @@
     "lint": "eslint",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build"
+    "build": "ng build",
+    "dev-deploy": "ng build && surge --domain sohncompositions-dev.surge.sh ./dist/sohncompositions.com",
+    "dev-teardown": "surge teardown sohncompositions-dev.surge.sh"
   },
   "private": true,
   "dependencies": {
@@ -37,6 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^3.8.0",
     "@typescript-eslint/parser": "^3.8.0",
     "eslint": "^7.6.0",
+    "surge": "^0.21.7",
     "ts-node": "~8.3.0",
     "typescript": "~3.7.5"
   }
