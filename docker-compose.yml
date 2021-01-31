@@ -1,14 +1,29 @@
 version: "3"
 services:
-  dev:
-    image: node:lts
+  base:
+    image: node:12.18.2
     volumes:
       - nodemodules:/usr/src/sohn-compositions-portfolio/node_modules/
       - .:/usr/src/sohn-compositions-portfolio/
     working_dir: /usr/src/sohn-compositions-portfolio
+  install:
+    extends:
+      service: base
+    command: npm i
+  dev:
+    extends:
+      service: base
+    depends_on:
+        - install
     command: npm start -- --host 0.0.0.0
     ports:
       - 4200:4200
+  build:
+    extends:
+      service: base
+    depends_on:
+      - install
+    command: npm run build -- --prod
 volumes:
   nodemodules:
     external: true

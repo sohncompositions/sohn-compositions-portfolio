@@ -4,12 +4,6 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Setup Sohn Compositions Portfolio",
-            "type": "shell",
-            "command": "./scripts/setup.cmd",
-            "problemMatcher": []
-        },
-        {
             "label": "Run Sohn Compositions Portfolio",
             "type": "shell",
             "command": "./scripts/run.cmd",
