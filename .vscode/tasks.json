@@ -1,19 +1,25 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Run Sohn Compositions Portfolio",
-            "type": "shell",
-            "command": "./scripts/run.cmd",
-            "problemMatcher": []
-        },
-        {
-            "label": "Build Sohn Compositions Portfolio",
-            "type": "shell",
-            "command": "./scripts/build.cmd",
-            "problemMatcher": []
-        }
-    ]
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Sohn Compositions Portfolio",
+      "type": "shell",
+      "command": "./scripts/run.cmd",
+      "problemMatcher": []
+    },
+    {
+      "label": "Build Sohn Compositions Portfolio",
+      "type": "shell",
+      "command": "./scripts/build.cmd",
+      "problemMatcher": []
+    },
+    {
+      "label": "Install Sohn Compositions Portfolio",
+      "type": "shell",
+      "command": "./scripts/install.cmd",
+      "problemMatcher": []
+    }
+  ]
 }
