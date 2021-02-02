@@ -23,9 +23,12 @@ There is also a separate [Email Server](https://github.com/sohncompositions/sohn
 ---
 ### Updating Guide
 
-#### Initial Setup (You probably only need to do these once)
+#### Initial Setup (You only need to do this once`)
 - Clone the [Repository](https://github.com/sohncompositions/sohn-compositions-portfolio) onto your machine
-- Open project in VS Code and run the task `Setup Sohn Compositions Portfolio`. This installs the necessary tools to run the application from within a Docker container
+- Open Project in VS Code.
+
+#### Install Dependencies (You only need to do this when a new package(s) is added to `package.json` file)
+- Run the task `Install Sohn Compositions Portfolio`. This installs the necessary tools to run the application from within a Docker container.
 
 #### Testing Changes
 - Run the task `Run Sohn Compositions Portfolio`. This starts the development server which serves the app locally on your machine.
