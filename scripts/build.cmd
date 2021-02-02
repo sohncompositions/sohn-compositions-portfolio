@@ -1,1 +1,1 @@
-docker-compose -f docker.compose.builder.yml run --rm build
+docker-compose -p sohn-compositions-portfolio-build up build
