@@ -1,3 +1,7 @@
+Patch Version 3.0.2
+**1-23-2021**
+- Fixed module dependency issue and refactored docker installation script
+
 Patch Version 3.0.1
 **1-23-2021**
 - Fixed issue where contact form button height was 0 on moble/safari
